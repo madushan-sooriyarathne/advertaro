@@ -4,7 +4,9 @@
   "description": "Website of advertaro.lk",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
   },
   "repository": {
     "type": "git",
@@ -15,10 +17,14 @@
   "bugs": {
     "url": "https://github.com/madushan-sooriyarathne/advertaro/issues"
   },
-  "homepage": "https://github.com/madushan-sooriyarathne/advertaro#readme",
+  "homepage": "https://advertaro.lk",
   "dependencies": {
     "next": "^9.5.5",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.11.1"
   }
 }
