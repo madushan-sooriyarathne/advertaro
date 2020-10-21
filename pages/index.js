@@ -3,6 +3,7 @@ import AboutSection from "../components/layout/about/AboutSection";
 import Page from "../components/layout/page/Page";
 import ServicesSection from "../components/layout/services/ServicesSection";
 import PartnerSection from "../components/layout/partners/PartnersSection";
+import ContactSection from "../components/layout/contact/ContactSection";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
           },
         ]}
       />
+      <ContactSection />
     </Page>
   );
 };
