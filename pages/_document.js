@@ -12,9 +12,12 @@ class MainDocument extends Document {
           ></link>
           {this.props.styleTags}
         </Head>
-        <body>
+        <body style="visibility: hidden" onLoad="jsLoad()">
           <Main />
           <NextScript />
+          <script>
+            function jsLoad() {(document.body.style.visibility = "visible")}
+          </script>
         </body>
       </Html>
     );
