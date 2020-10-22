@@ -6,6 +6,7 @@ const Description = styled.p`
   letter-spacing: 1px;
   text-align: center;
   margin-top: 3rem;
+  color: ${(props) => props.theme.colorBlack};
 `;
 
 const Container = styled.div`

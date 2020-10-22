@@ -9,7 +9,7 @@ const Container = styled.div`
   grid-template-rows: 1fr max-content;
   align-items: center;
   justify-items: center;
-  height: calc(100vh - 11rem);
+  height: 100vh;
   background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.95) 0%,
@@ -32,7 +32,7 @@ const Heading = styled.h2`
   font-size: 7rem;
   font-weight: 900;
   letter-spacing: 3px;
-  color: #f57138;
+  color: ${(props) => props.theme.colorPrimary};
   text-transform: uppercase;
   margin-bottom: 2rem;
 `;
@@ -41,7 +41,7 @@ const SubHeading = styled.h1`
   font-size: 3.5rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #fff;
+  color: ${(props) => props.theme.colorWhite};
   text-transform: uppercase;
 `;
 

@@ -7,7 +7,7 @@ class MainDocument extends Document {
       <Html lang="en">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Philosopher:wght@400;700&display=swap"
             rel="stylesheet"
           ></link>
           {this.props.styleTags}

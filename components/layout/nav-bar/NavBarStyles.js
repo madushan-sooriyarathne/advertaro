@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const NavBarComponent = styled.div`
+  position: absolute;
+  top: 0;
   display: grid;
   grid-template-columns:
     [full-start] minmax(6rem, 10rem) [content-start] minmax(max-content, 1fr)
@@ -10,7 +12,7 @@ const NavBarComponent = styled.div`
   width: 100%;
   padding: 3rem 0;
 
-  background-color: #2f3441;
+  background-color: rgba(0, 0, 0, 0.5);
 `;
 
 const Logo = styled.img`

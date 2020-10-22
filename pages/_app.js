@@ -1,4 +1,8 @@
+import { ThemeProvider } from "styled-components";
 import Head from "next/head";
+
+import theme from "../styles/theme";
+
 import "../styles/global.css";
 
 const MainApp = ({ Component, pageProps }) => {
@@ -7,7 +11,9 @@ const MainApp = ({ Component, pageProps }) => {
       <Head>
         <title>Advertaro - Transform Your Digital Outreach</title>
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 };

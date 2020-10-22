@@ -16,13 +16,13 @@ const Box = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: ${(props) => props.theme.boxShadowNormal};
 
   &:hover {
     background-image: ${(props) =>
       `linear-gradient(0deg, rgba(55,22,2,0.6) 0%, rgba(59,21,3,0) 100%), url(${props.image})`};
     transform: translateY(-0.5rem);
-    box-shadow: 0 8px 16px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: ${(props) => props.theme.boxShadowHover};
   }
 `;
 
@@ -30,7 +30,7 @@ const Name = styled.p`
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #fff;
+  color: ${(props) => props.theme.colorWhite};
   transition: transform 0.2s ease-in-out;
 
   &:hover {

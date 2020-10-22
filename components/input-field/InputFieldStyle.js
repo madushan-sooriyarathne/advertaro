@@ -14,13 +14,13 @@ const Field = styled.input`
   padding: 1.5rem 1rem;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2e4257;
+  color: ${(props) => props.theme.colorSecondary};
   outline: none;
-  border: 2px solid #27374a;
-  font-family: "Montserrat", sans-serif;
+  border: ${(props) => `2px solid ${props.theme.colorSecondary}`};
+  font-family: ${(props) => props.theme.fontPrimary};
 
   &::placeholder {
-    font-family: "Montserrat", sans-serif;
+    font-family: ${(props) => props.theme.fontPrimary};
     font-size: 1.5rem;
     font-weight: 400;
   }
@@ -34,14 +34,14 @@ const TextArea = styled.textarea`
   padding: 1.5rem 1rem;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #2e4257;
+  color: ${(props) => props.theme.colorSecondary};
   resize: none;
   outline: none;
-  border: 2px solid #27374a;
-  font-family: "Montserrat", sans-serif;
+  border: ${(props) => `2px solid ${props.theme.colorSecondary}`};
+  font-family: ${(props) => props.theme.fontPrimary};
 
   &::placeholder {
-    font-family: "Montserrat", sans-serif;
+    font-family: ${(props) => props.theme.fontPrimary};
     font-size: 1.5rem;
     font-weight: 400;
   }
