@@ -12,10 +12,9 @@ class MainDocument extends Document {
           ></link>
           {this.props.styleTags}
         </Head>
-        <body>
+        <body style={{ visibility: "hidden" }}>
           <Main />
           <NextScript />
-          <script></script>
         </body>
       </Html>
     );

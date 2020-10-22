@@ -4,8 +4,13 @@ import Head from "next/head";
 import theme from "../styles/theme";
 
 import "../styles/global.css";
+import { useEffect } from "react";
 
 const MainApp = ({ Component, pageProps }) => {
+  useEffect(() => {
+    document.body.style.visibility = "visible";
+  }, []);
+
   return (
     <>
       <Head>
