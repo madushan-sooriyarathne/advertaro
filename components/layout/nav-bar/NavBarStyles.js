@@ -12,7 +12,7 @@ const NavBarComponent = styled.div`
   width: 100%;
   padding: 3rem 0;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 `;
 
 const Logo = styled.img`
@@ -39,12 +39,12 @@ const NavLink = styled.a`
   font-size: 1.8rem;
   font-weight: 600;
   outline: none;
-  color: #fff;
+  color: ${(props) => props.theme.colorWhite};
   transition: color 0.2s ease-in-out;
   cursor: pointer;
 
   &:hover {
-    color: #ccc;
+    color: ${(props) => props.theme.colorPrimaryLite};
   }
 `;
 

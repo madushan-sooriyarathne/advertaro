@@ -9,7 +9,7 @@ const Page = ({ children }) => {
       <NavBar
         navLinks={[
           { href: "/about", name: "About" },
-          { href: "/work", name: "Work" },
+          { href: "/case-studies", name: "Case Studies" },
           { href: "/contact", name: "Contact" },
         ]}
       ></NavBar>
