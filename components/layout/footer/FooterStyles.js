@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FooterSection = styled.footer`
+const FooterSection = styled.div`
   display: grid;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [content-start] 130rem [content-end] minmax(

@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.section`
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 10rem) [mid-start] 1fr [mid-end] minmax(
-      6rem,
-      10rem
-    );
+  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
   grid-template-rows: 1fr max-content;
   align-items: center;
   justify-items: center;
@@ -20,7 +17,7 @@ const Container = styled.div`
 `;
 
 const CTAGroup = styled.div`
-  grid-column: mid-start / mid-end;
+  grid-column: content-start / content-end;
 
   display: flex;
   flex-direction: column;

@@ -1,18 +1,21 @@
 import styled from "styled-components";
 
-const Section = styled.div`
+const Section = styled.section`
   display: grid;
-  grid-template-columns:
-    [full-start] minmax(6rem, 10rem)
-    [content-start] 1fr [mid] 1fr [content-end] minmax(6rem, 10rem)
-    [full-end];
-  gap: 10rem;
+  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
   height: 60rem;
   margin: 20rem 0;
 `;
 
+const ContactWrapper = styled.section`
+  grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: [form-start] 1fr [form-end cover-start] 1fr [cover-end];
+  gap: 10rem;
+`;
+
 const FormWrapper = styled.div`
-  grid-column: content-start / mid;
+  grid-column: form-start / form-end;
 
   display: flex;
   flex-direction: column;
@@ -28,7 +31,7 @@ const FormGroup = styled.form`
 `;
 
 const ImageWrapper = styled.div`
-  grid-column: mid / content-end;
+  grid-column: cover-start / cover-end;
 
   background-image: url("/static/img/contact-cover.jpg");
   background-size: cover;
@@ -36,4 +39,4 @@ const ImageWrapper = styled.div`
   background-repeat: no-repeat;
 `;
 
-export { Section, FormGroup, FormWrapper, ImageWrapper };
+export { Section, ContactWrapper, FormGroup, FormWrapper, ImageWrapper };

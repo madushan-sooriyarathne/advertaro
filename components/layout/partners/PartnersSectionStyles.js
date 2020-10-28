@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
-const Section = styled.div`
+const Section = styled.section`
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 10rem) [content-start] 1fr [content-end] minmax(
-      6rem,
-      10rem
-    );
+  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
   grid-template-rows: [heading-start] max-content [heading-end content-start] max-content [content-end button-start] min-content [button-end];
   gap: 5rem;
   align-items: center;
