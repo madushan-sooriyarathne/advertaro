@@ -4,7 +4,7 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
   height: 60rem;
-  margin: 20rem 0;
+  margin: 20rem 0 10rem 0;
 `;
 
 const ContactWrapper = styled.section`
@@ -28,6 +28,10 @@ const FormGroup = styled.form`
   align-items: stretch;
 
   margin-top: 5rem;
+
+  & > * {
+    margin-bottom: 2rem;
+  }
 `;
 
 const ImageWrapper = styled.div`

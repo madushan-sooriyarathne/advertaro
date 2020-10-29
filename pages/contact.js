@@ -1,10 +1,19 @@
+import dynamic from "next/dynamic";
 import Page from "../components/layout/page/Page";
-import MainHeading from "../components/headings/main-heading/MainHeading";
+import Header from "../components/layout/header/Header";
+import ContactDetailsSection from "../components/layout/contact-details/ContactDetailsSection";
+
+const FullWidthMap = dynamic(
+  () => import("../components/layout/maps/FullWidthMap"),
+  { ssr: false }
+);
 
 const Contact = () => {
   return (
     <Page>
-      <MainHeading>Contact us</MainHeading>
+      <Header title="Contact us" />
+      <ContactDetailsSection />
+      <FullWidthMap />
     </Page>
   );
 };

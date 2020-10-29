@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import InputField from "./InputField";
 
 const InputGroup = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 2rem;
 `;
 
 const Field = styled.input`

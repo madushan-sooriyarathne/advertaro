@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CallToActionButton = styled.div`
+const CallToActionButton = styled.button`
   position: relative;
   padding: 1rem 1.5rem;
   border: ${(props) => `2px solid ${props.theme.colorWhite}`};
@@ -12,6 +12,7 @@ const CallToActionButton = styled.div`
   text-decoration: none;
   text-transform: uppercase;
   color: ${(props) => props.theme.colorWhite};
+  background-color: transparent;
 
   cursor: pointer;
   transition: color 0.3s ease-in, background-color 0.3s ease-in-out;

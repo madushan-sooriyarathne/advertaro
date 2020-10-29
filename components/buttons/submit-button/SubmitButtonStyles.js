@@ -6,6 +6,7 @@ const Button = styled(CallToActionButton)`
   color: ${(props) => props.theme.colorSecondary};
   align-self: flex-start;
   transition: all 0.2s ease-in-out;
+  height: 100%;
 
   &:hover {
     color: ${(props) => props.theme.colorWhite};
