@@ -1,6 +1,5 @@
 import NavBar from "../nav-bar/NavBar";
 import Footer from "../footer/Footer";
-import Newsletter from "../newsletter/Newsletter";
 
 import { Wrapper, Content, FooterWrapper } from "./PageStyles";
 
@@ -18,7 +17,6 @@ const Page = ({ children }) => {
       <Content>{children}</Content>
 
       <FooterWrapper>
-        <Newsletter />
         <Footer />
       </FooterWrapper>
     </Wrapper>

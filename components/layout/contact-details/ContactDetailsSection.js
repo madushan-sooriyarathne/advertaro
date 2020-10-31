@@ -8,15 +8,15 @@ import SubmitButton from "../../buttons/submit-button/SubmitButton";
 import {
   ContactDetailsWrapper,
   ContentWrapper,
+  MapWrapper,
   TitleGroup,
   ContactForm,
   ContactDetails,
   CompanyName,
   ContactItemsGroup,
   ContactItem,
-  Icon,
-  ItemName,
 } from "./ContactDetailsSectionStyles";
+import FullWidthMap from "../maps/FullWidthMap";
 
 const ContactDetailsSection = () => {
   const [name, updateName, resetName] = useInputState();
@@ -82,26 +82,21 @@ const ContactDetailsSection = () => {
           <CompanyName>Advertaro Creative Agency</CompanyName>
           <ContactItemsGroup>
             <ContactItem>
-              <Icon>
-                <use xlinkHref="/static/img/svg/sprites.svg#location" />
-              </Icon>
-              <ItemName>No 18, Gnanathilake Mawatha, Mount Lavinia.</ItemName>
+              No 18, Gnanathilake Mawatha, Mount Lavinia.
             </ContactItem>
-            <ContactItem>
-              <Icon>
-                <use xlinkHref="/static/img/svg/sprites.svg#phone" />
-              </Icon>
-              <ItemName>+94 71 688 0657</ItemName>
-            </ContactItem>
-            <ContactItem>
-              <Icon>
-                <use xlinkHref="/static/img/svg/sprites.svg#mail" />
-              </Icon>
-              <ItemName>hello@advertaro.lk</ItemName>
-            </ContactItem>
+            <ContactItem>+94 71 688 0657</ContactItem>
+            <ContactItem>hello@advertaro.lk</ContactItem>
           </ContactItemsGroup>
         </ContactDetails>
       </ContentWrapper>
+      <MapWrapper>
+        <FullWidthMap
+          googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}`}
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `100%` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
+      </MapWrapper>
     </ContactDetailsWrapper>
   );
 };

@@ -11,7 +11,10 @@ const NavBar = ({ navLinks }) => {
   return (
     <HeadingWrapper>
       <NavBarWrapper>
-        <Logo src="/static/img/advertaro-logo.svg" alt="advertaro logo" />
+        <Link href="/">
+          <Logo src="/static/img/advertaro-logo.svg" alt="advertaro logo" />
+        </Link>
+
         <NavLinkSet>
           {navLinks.map((link) => (
             <Link href={link.href} key={link.name}>

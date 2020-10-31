@@ -9,8 +9,8 @@ const InputGroup = styled.div`
 
 const Field = styled.input`
   width: 100%;
-  padding: 1.5rem 1rem;
-  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: ${(props) => props.theme.colorSecondary};
   outline: none;

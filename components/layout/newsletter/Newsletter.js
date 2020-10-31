@@ -15,7 +15,7 @@ const Newsletter = () => {
     <NewsletterSection>
       <NewsletterWrapper>
         <TitleGroup>
-          <MainHeading>Receive Exclusive Offers and Value Deals</MainHeading>
+          <MainHeading>Receive Continuous updates</MainHeading>
           <SecondaryHeading>Subscribe to our Newsletter</SecondaryHeading>
         </TitleGroup>
         <FormGroup>

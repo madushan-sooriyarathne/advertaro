@@ -5,6 +5,7 @@ import ServicesSection from "../components/layout/services/ServicesSection";
 import PartnerSection from "../components/layout/partners/PartnersSection";
 import ContactSection from "../components/layout/contact/ContactSection";
 import Footer from "../components/layout/footer/Footer";
+import Newsletter from "../components/layout/newsletter/Newsletter";
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
         ]}
       />
       <ContactSection />
+      <Newsletter />
     </Page>
   );
 };

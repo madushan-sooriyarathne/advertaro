@@ -13,7 +13,6 @@ const Contact = () => {
     <Page>
       <Header title="Contact us" />
       <ContactDetailsSection />
-      <FullWidthMap />
     </Page>
   );
 };

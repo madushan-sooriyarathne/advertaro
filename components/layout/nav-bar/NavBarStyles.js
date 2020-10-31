@@ -6,6 +6,7 @@ const HeadingWrapper = styled.header`
   display: grid;
   grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
   width: 100vw;
+  height: ${(props) => props.theme.navBarHeight};
   padding: 3rem 0;
 
   background-color: rgba(0, 0, 0, 0.6);
@@ -23,6 +24,7 @@ const NavBarWrapper = styled.div`
 const Logo = styled.img`
   grid-column: logo-start / logo-end;
   height: 5rem;
+  cursor: pointer;
 `;
 
 const NavLinkSet = styled.nav`

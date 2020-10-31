@@ -1,14 +1,7 @@
-import { HeaderContainer, ContentWrapper } from "./HeaderStyles";
-import PageHeading from "../../headings/page-heading/PageHeading";
+import { HeaderContainer } from "./HeaderStyles";
 
-const Header = ({ title }) => {
-  return (
-    <HeaderContainer>
-      <ContentWrapper>
-        <PageHeading>{title}</PageHeading>
-      </ContentWrapper>
-    </HeaderContainer>
-  );
+const Header = () => {
+  return <HeaderContainer />;
 };
 
 export default Header;
