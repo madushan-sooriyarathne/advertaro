@@ -9,6 +9,7 @@ const InputGroup = styled.div`
 
 const Field = styled.input`
   width: 100%;
+  height: 100%;
   padding: 1rem 0.5rem;
   font-size: 1.4rem;
   font-weight: 600;
