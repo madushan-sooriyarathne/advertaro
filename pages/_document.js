@@ -11,6 +11,19 @@ class MainDocument extends Document {
             rel="stylesheet"
           ></link>
           {this.props.styleTags}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-KQKFG2HJGR"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KQKFG2HJGR');`,
+            }}
+          />
         </Head>
         <body style={{ visibility: "hidden" }}>
           <Main />
