@@ -1,24 +1,22 @@
-import NavBar from "../nav-bar/NavBar";
 import Footer from "../footer/Footer";
+import NavBar from "../nav-bar/NavBar";
 
-import { Wrapper, Content, FooterWrapper } from "./PageStyles";
+import { Wrapper } from "./PageStyles";
 
 const Page = ({ children }) => {
   return (
     <Wrapper>
       <NavBar
         navLinks={[
-          { href: "/about", name: "About" },
-          { href: "/case-studies", name: "Case Studies" },
-          { href: "/contact", name: "Contact" },
+          { name: "Home", href: "/" },
+          { name: "About", href: "/about" },
+          { name: "Case Studies", href: "/case-studies" },
+          { name: "contact", href: "/contact" },
         ]}
-      ></NavBar>
+      />
+      {children}
 
-      <Content>{children}</Content>
-
-      <FooterWrapper>
-        <Footer />
-      </FooterWrapper>
+      <Footer />
     </Wrapper>
   );
 };

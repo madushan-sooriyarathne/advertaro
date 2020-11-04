@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 const ContactDetailsWrapper = styled.section`
+  grid-column: full-start / full-end;
+
   display: grid;
   grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
 
   width: 100%;
   min-height: 100vh;
+
+  margin-top: ${(props) => `calc(${props.theme.navBarHeight} + 2rem)`};
 `;
 
 const MapWrapper = styled.div`
@@ -19,6 +23,8 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: stretch;
   padding: 5rem;
+
+  background-color: ${(props) => props.theme.colorBg};
 `;
 
 const TitleGroup = styled.div`

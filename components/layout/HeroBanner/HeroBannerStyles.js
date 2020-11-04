@@ -1,23 +1,25 @@
 import styled from "styled-components";
 
 const Container = styled.section`
-  display: grid;
-  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
-  grid-template-rows: 1fr max-content;
+  grid-column: full-start / full-end;
+
+  display: flex;
+
+  justify-content: center;
   align-items: center;
-  justify-items: center;
+
   height: 100vh;
   background: linear-gradient(
       90deg,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(37, 16, 4, 0.95) 35%,
-      rgba(0, 0, 0, 0.95) 100%
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(37, 16, 4, 0.7) 35%,
+      rgba(0, 0, 0, 0.7) 100%
     ),
     url("/static/img/hero-background.jpg");
 `;
 
 const CTAGroup = styled.div`
-  grid-column: content-start / content-end;
+  grid-column: center-start / center-end;
 
   display: flex;
   flex-direction: column;

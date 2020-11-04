@@ -1,20 +1,20 @@
 import MainHeading from "../../headings/main-heading/MainHeading";
 import SecondaryHeading from "../../headings/secondary-heading/SecondaryHeading";
-import { Container, Group, Description } from "./AboutSectionStyles";
+import { Container, TitleGroup, Description } from "./AboutSectionStyles";
 
 const AboutSection = () => {
   return (
     <Container>
-      <Group>
+      <TitleGroup>
         <MainHeading>We Are</MainHeading>
         <SecondaryHeading>
           a Small Digital Agency with Big Solutions
         </SecondaryHeading>
-        <Description>
-          We help small to medium business / organizations to Digital with
-          <br></br> our comprehensive & result-oriented Marketing Solutions
-        </Description>
-      </Group>
+      </TitleGroup>
+      <Description>
+        We help small to medium business / organizations to Digital with
+        <br></br> our comprehensive & result-oriented Marketing Solutions
+      </Description>
     </Container>
   );
 };

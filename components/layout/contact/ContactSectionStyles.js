@@ -1,17 +1,13 @@
 import styled from "styled-components";
 
 const Section = styled.section`
-  display: grid;
-  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
-  height: 60rem;
-  margin: 20rem 0 10rem 0;
-`;
-
-const ContactWrapper = styled.section`
   grid-column: content-start / content-end;
+
   display: grid;
   grid-template-columns: [form-start] 1fr [form-end cover-start] 1fr [cover-end];
   gap: 10rem;
+  height: 30vw;
+  margin: 10rem 0 10rem 0;
 `;
 
 const FormWrapper = styled.div`
@@ -43,4 +39,4 @@ const ImageWrapper = styled.div`
   background-repeat: no-repeat;
 `;
 
-export { Section, ContactWrapper, FormGroup, FormWrapper, ImageWrapper };
+export { Section, FormGroup, FormWrapper, ImageWrapper };

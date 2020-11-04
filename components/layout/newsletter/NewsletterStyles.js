@@ -1,17 +1,15 @@
 import styled from "styled-components";
 
 const NewsletterSection = styled.section`
-  display: grid;
-  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
-  margin: 10rem 0;
-`;
-
-const NewsletterWrapper = styled.div`
-  grid-column: content-start / content-end;
+  grid-column: full-start / full-end;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-color: ${(props) => props.theme.colorBg};
+
+  padding: 10rem 0;
 `;
 
 const TitleGroup = styled.div`
@@ -33,4 +31,4 @@ const FormGroup = styled.form`
   }
 `;
 
-export { NewsletterSection, NewsletterWrapper, TitleGroup, FormGroup };
+export { NewsletterSection, TitleGroup, FormGroup };

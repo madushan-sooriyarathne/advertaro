@@ -4,17 +4,15 @@ const Wrapper = styled.div`
   max-width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  position: relative;
 
   display: grid;
-  grid-template-rows: [nav-start] max-content [nav-end content-start] 1fr [content-end footer-start] max-content [footer-end];
+  grid-template-columns:
+    [full-start] minmax(5rem, 1fr) [content-start] repeat(
+      8,
+      [col-start] minmax(min-content, 20rem) [col-end]
+    )
+    [content-end] minmax(5rem, 1fr) [full-end];
 `;
 
-const FooterWrapper = styled.footer`
-  grid-row: footer-start / footer-end;
-`;
-
-const Content = styled.div`
-  grid-row: content-start / content-end;
-`;
-
-export { Wrapper, Content, FooterWrapper };
+export { Wrapper };

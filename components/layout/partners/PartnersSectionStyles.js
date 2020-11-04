@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const Section = styled.section`
+  grid-column: content-start / content-end;
+
   display: grid;
-  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
   grid-template-rows: [heading-start] max-content [heading-end content-start] max-content [content-end button-start] min-content [button-end];
   gap: 5rem;
   align-items: center;
@@ -11,7 +12,6 @@ const Section = styled.section`
 `;
 
 const HeadingGroup = styled.div`
-  grid-column: content-start / content-end;
   grid-row: heading-start / heading-end;
 
   display: flex;
@@ -21,7 +21,6 @@ const HeadingGroup = styled.div`
 `;
 
 const Partners = styled.div`
-  grid-column: content-start / content-end;
   grid-row: content-start / content-end;
 
   display: flex;
@@ -34,7 +33,6 @@ const Partners = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  grid-column: content-start / content-end;
   grid-row: button-start / button-end;
 
   display: flex;

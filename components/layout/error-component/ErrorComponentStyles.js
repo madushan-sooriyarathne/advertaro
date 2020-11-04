@@ -1,17 +1,11 @@
 import styled from "styled-components";
 
 const ErrorWrapper = styled.section`
-  min-height: ${(props) => `calc(100vh - ${props.theme.navBarHeight})`};
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
-  justify-items: center;
-  align-items: center;
-`;
-
-const Container = styled.div`
   grid-column: content-start / content-end;
+
+  min-height: 100vh;
+  padding-top: ${(props) => `calc(${props.theme.navBarHeight} + 5rem)`};
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,4 +24,4 @@ const ErrorImage = styled.img`
   margin-bottom: 5rem;
 `;
 
-export { ErrorWrapper, Container, TitleGroup, ErrorImage };
+export { ErrorWrapper, TitleGroup, ErrorImage };

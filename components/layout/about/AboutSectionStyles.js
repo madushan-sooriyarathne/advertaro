@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 const Container = styled.section`
-  display: grid;
-  grid-template-columns: ${(props) => props.theme.gridTemplateColumns};
+  grid-column: content-start / content-end;
+
   margin: 8rem 0;
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
+`;
+
+const TitleGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
 `;
 
 const Description = styled.p`
@@ -13,16 +22,7 @@ const Description = styled.p`
   font-weight: 500;
   letter-spacing: 1px;
   text-align: center;
-  margin-top: 3rem;
   color: ${(props) => props.theme.colorBlack};
 `;
 
-const Group = styled.div`
-  grid-column: content-start / content-end;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export { Container, Group, Description };
+export { Container, TitleGroup, Description };

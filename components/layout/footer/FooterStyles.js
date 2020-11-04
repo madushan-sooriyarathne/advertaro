@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
 const FooterSection = styled.div`
+  grid-column: full-start / full-end;
+
   display: grid;
   grid-template-columns:
-    [full-start] minmax(6rem, 1fr) [content-start] 130rem [content-end] minmax(
-      6rem,
-      1fr
+    [border-start] 1fr [center-start] repeat(
+      3,
+      [col-start] minmax(min-content, 1fr) [col-end]
     )
-    [full-end];
+    [center-end] 1fr [border-end];
+  gap: 5rem;
+
+  align-items: start;
+  justify-items: center;
   background-image: linear-gradient(
     313deg,
     rgba(169, 28, 115, 1) 21.6%,
@@ -16,39 +22,13 @@ const FooterSection = styled.div`
   padding: 10rem;
 `;
 
-const FooterWrapper = styled.div`
-  grid-column: content-start / content-end;
+const CompanyIntroGroup = styled.div`
+  grid-column: center-start / col-start;
 
-  display: grid;
-  grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
-  gap: 5rem;
-
-  align-items: start;
-  justify-items: center;
-`;
-
-const FooterGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-`;
-
-const FooterLinksGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  & > *:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-`;
-
-const ContactItemGroup = styled(FooterLinksGroup)`
-  & > *:not(:last-child) {
-    margin-bottom: 2rem;
-  }
 `;
 
 const CompanyName = styled.h2`
@@ -64,6 +44,25 @@ const CompanyDescription = styled.p`
   font-weight: 500;
   color: ${(props) => props.theme.colorWhite};
   letter-spacing: 1px;
+`;
+
+const FooterNavigationGroup = styled.div`
+  grid-column: col-start 2 / col-end 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+
+const FooterLinksGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  & > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const FooterColumnHeading = styled.h3`
@@ -92,12 +91,26 @@ const FooterNavLink = styled.a`
   }
 `;
 
+const ContactGroup = styled.div`
+  grid-column: col-start 3 / col-end 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+
 const ContactDetailsHeading = styled.p`
   font-size: 2.2rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: ${(props) => props.theme.colorWhite};
   margin-bottom: 2rem;
+`;
+
+const ContactItemGroup = styled(FooterLinksGroup)`
+  & > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const ContactItem = styled.div`
@@ -148,15 +161,16 @@ const SocialMediaIcon = styled.svg`
 
 export {
   FooterSection,
-  FooterWrapper,
-  FooterGroup,
-  FooterLinksGroup,
-  ContactItemGroup,
+  CompanyIntroGroup,
   CompanyName,
   CompanyDescription,
+  FooterNavigationGroup,
+  FooterLinksGroup,
   FooterColumnHeading,
   FooterNavLink,
+  ContactGroup,
   ContactDetailsHeading,
+  ContactItemGroup,
   ContactItem,
   ContactIcon,
   ContactItemText,
