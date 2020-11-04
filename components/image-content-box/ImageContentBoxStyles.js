@@ -12,18 +12,26 @@ const Image = styled.img`
   background-image: ${(props) => `url(${props.image})`};
   background-size: cover;
   background-repeat: no-repeat;
+
+  margin-bottom: 3rem;
 `;
 
 const BoxTitle = styled.h3`
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 1px;
   color: ${(props) => props.theme.colorSecondary};
   text-transform: uppercase;
+  margin-bottom: 2rem;
 `;
 
 const Description = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 400;
+  letter-spacing: 0.5px;
+  font-family: ${(props) => props.theme.fontSecondary};
+  line-height: 2.4rem;
+
   color: ${(props) => props.theme.colorSecondary};
 `;
 
