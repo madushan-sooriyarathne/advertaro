@@ -1,4 +1,4 @@
-import MainHeader from "../../headings/main-heading/MainHeading";
+import MainHeading from "../../headings/main-heading/MainHeading";
 import SecondaryHeading from "../../headings/secondary-heading/SecondaryHeading";
 import InputField from "../../input-field/InputField";
 import SubmitButton from "../../buttons/submit-button/SubmitButton";
@@ -15,7 +15,7 @@ const ContactSection = () => {
     <Section>
       <FormWrapper>
         <SecondaryHeading>Looking for a creative partner?</SecondaryHeading>
-        <MainHeader>Let's Work Together</MainHeader>
+        <MainHeading>Let's Work Together</MainHeading>
         <FormGroup>
           <InputField
             name="Your Name"
