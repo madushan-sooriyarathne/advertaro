@@ -30,6 +30,7 @@ const CTAGroup = styled.div`
 const Heading = styled.h2`
   font-size: 7rem;
   font-weight: 900;
+  font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 3px;
   color: ${(props) => props.theme.colorPrimary};
   text-transform: uppercase;
@@ -39,6 +40,7 @@ const Heading = styled.h2`
 const SubHeading = styled.h1`
   font-size: 3.5rem;
   font-weight: 600;
+  font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 2px;
   color: ${(props) => props.theme.colorWhite};
   text-transform: uppercase;
