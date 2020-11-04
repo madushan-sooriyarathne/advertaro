@@ -1,5 +1,6 @@
 import Page from "../components/layout/page/Page";
 import SpecialtiesSection from "../components/layout/specialties/SpecialtiesSection";
+import CTABanner from "../components/layout/cta-banner/CTABanner";
 
 // put this item into some online CRM
 const specialties = [
@@ -45,6 +46,11 @@ const About = () => {
   return (
     <Page>
       <SpecialtiesSection specialties={specialties} />
+      <CTABanner
+        title="Have a project in mind?"
+        subtitle="We'd love to hear it from you!"
+        button={{ text: "Say Hello", url: "/contact" }}
+      />
     </Page>
   );
 };

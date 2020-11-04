@@ -12,8 +12,8 @@ const AboutSection = () => {
         </SecondaryHeading>
       </TitleGroup>
       <Description>
-        We help small to medium business / organizations to Digital with
-        <br></br> our comprehensive & result-oriented Marketing Solutions
+        We help small to medium business / organizations to Digital with our{" "}
+        <br /> comprehensive & result-oriented Marketing Solutions
       </Description>
     </Container>
   );
