@@ -9,7 +9,7 @@ const Box = styled.div`
   width: 100%;
   height: 100%;
   min-width: 10rem;
-  min-height: 45rem;
+  min-height: 35rem;
   background-image: ${(props) =>
     `linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%), url(${props.image})`};
   background-position: center;
