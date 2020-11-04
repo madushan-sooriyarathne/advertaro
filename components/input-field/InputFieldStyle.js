@@ -10,10 +10,11 @@ const InputGroup = styled.div`
 const Field = styled.input`
   width: 100%;
   height: 100%;
-  padding: 1rem 0.5rem;
+  padding: 1rem 1rem;
   font-size: 1.4rem;
   font-weight: 600;
   color: ${(props) => props.theme.colorSecondary};
+  background-color: transparent;
   outline: none;
   border: ${(props) => `2px solid ${props.theme.colorSecondary}`};
   font-family: ${(props) => props.theme.fontPrimary};
@@ -30,10 +31,11 @@ const TextArea = styled.textarea`
   height: 14rem;
   max-width: 100%;
   max-height: 14rem;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
   font-size: 1.5rem;
   font-weight: 600;
   color: ${(props) => props.theme.colorSecondary};
+  background-color: transparent;
   resize: none;
   outline: none;
   border: ${(props) => `2px solid ${props.theme.colorSecondary}`};
