@@ -13,6 +13,7 @@ const HeadingWrapper = styled.header`
   width: 100vw;
   min-height: ${(props) => props.theme.navBarHeight};
   padding: 3rem 0;
+  z-index: 10;
 `;
 
 const NavBarWrapper = styled.div`
@@ -55,8 +56,24 @@ const NavLink = styled.a`
   cursor: pointer;
   position: relative;
 
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.8rem;
+    background-color: ${(props) => props.theme.colorPrimaryLite};
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: rotate(1deg);
+
+    transition: width 0.3s ease-in-out;
+  }
+
   &:hover {
-    color: ${(props) => props.theme.colorPrimaryLite};
+    &:before {
+      width: 100%;
+    }
   }
 
   &:after {
