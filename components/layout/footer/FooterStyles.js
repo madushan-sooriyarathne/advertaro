@@ -34,6 +34,7 @@ const CompanyIntroGroup = styled.div`
 const CompanyName = styled.h2`
   font-size: 3.5rem;
   font-weight: 900;
+  font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 3px;
   color: ${(props) => props.theme.colorWhite};
   margin-bottom: 2rem;
@@ -68,6 +69,7 @@ const FooterLinksGroup = styled.div`
 const FooterColumnHeading = styled.h3`
   font-size: 2.4rem;
   font-weight: 700;
+  font-family: ${(props) => props.theme.fontPrimary};
   text-transform: uppercase;
   color: ${(props) => props.theme.colorWhite};
   padding: 0.2rem 0;
@@ -102,6 +104,7 @@ const ContactGroup = styled.div`
 const ContactDetailsHeading = styled.p`
   font-size: 2.2rem;
   font-weight: 700;
+  font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 2px;
   color: ${(props) => props.theme.colorWhite};
   margin-bottom: 2rem;

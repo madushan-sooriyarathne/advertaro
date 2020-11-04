@@ -19,6 +19,7 @@ const Image = styled.img`
 const BoxTitle = styled.h3`
   font-size: 2rem;
   font-weight: 700;
+  font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 1px;
   color: ${(props) => props.theme.colorSecondary};
   text-transform: uppercase;

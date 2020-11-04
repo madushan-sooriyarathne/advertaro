@@ -58,6 +58,7 @@ const ContactDetails = styled.div`
 const CompanyName = styled.p`
   font-size: 3rem;
   font-weight: 700;
+  font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 2px;
   color: ${(props) => props.theme.colorPrimary};
   margin-bottom: 1.5rem;

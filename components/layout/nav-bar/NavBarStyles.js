@@ -50,6 +50,7 @@ const NavLink = styled.a`
   text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: 600;
+  font-family: ${(props) => props.theme.fontPrimary};
   outline: none;
   color: ${(props) => props.theme.colorGray};
   transition: color 0.2s ease-in-out;

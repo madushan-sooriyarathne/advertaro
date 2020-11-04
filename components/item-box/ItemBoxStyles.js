@@ -29,6 +29,7 @@ const Box = styled.div`
 const Name = styled.p`
   font-size: 2rem;
   font-weight: 600;
+  font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 2px;
   color: ${(props) => props.theme.colorWhite};
   transition: transform 0.2s ease-in-out;
