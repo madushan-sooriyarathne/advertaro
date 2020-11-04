@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   grid-template-columns:
     [full-start] minmax(5rem, 1fr) [content-start] repeat(
       8,
-      [col-start] minmax(min-content, 20rem) [col-end]
+      [col-start] minmax(min-content, 16rem) [col-end]
     )
     [content-end] minmax(5rem, 1fr) [full-end];
 `;
