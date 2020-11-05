@@ -15,10 +15,7 @@ const SnackBar = () => {
 
   return (
     <Bar show={message}>
-      <Message>
-        You have been successfully subscribed to our newsletter. A confirmation
-        email has been sent!
-      </Message>
+      <Message>{message}</Message>
       <CloseButton onClick={closeSnackBar}>
         <use xlinkHref="/static/img/svg/sprites.svg#close"></use>
       </CloseButton>

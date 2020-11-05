@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Bar = styled.div`
   position: fixed;
+  visibility: ${(props) => (props.show ? "visible" : "hidden")};
   bottom: ${(props) => (props.show ? "3rem" : "-10rem")};
   left: 3rem;
 
