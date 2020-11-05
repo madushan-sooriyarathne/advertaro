@@ -6,7 +6,7 @@ const Section = styled.section`
   display: grid;
   grid-template-columns: [form-start] 1fr [form-end cover-start] 1fr [cover-end];
   gap: 10rem;
-  height: 30vw;
+  min-height: 30vw;
   margin: 10rem 0 10rem 0;
 `;
 

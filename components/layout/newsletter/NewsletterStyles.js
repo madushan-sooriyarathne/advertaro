@@ -21,7 +21,7 @@ const TitleGroup = styled.div`
 
 const FormGroup = styled.form`
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 1fr min-content;
   align-items: stretch;
   justify-content: stretch;
   width: 50%;
