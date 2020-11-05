@@ -1,10 +1,12 @@
-import { ThemeProvider } from "styled-components";
+import { useEffect } from "react";
 import Head from "next/head";
 
+import { ThemeProvider } from "styled-components";
+
 import theme from "../styles/theme";
+import SnackBarContextProvider from "../context/SnackBarContext";
 
 import "../styles/global.css";
-import { useEffect } from "react";
 
 const MainApp = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -17,7 +19,9 @@ const MainApp = ({ Component, pageProps }) => {
         <title>Advertaro - Transform Your Digital Outreach</title>
       </Head>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <SnackBarContextProvider>
+          <Component {...pageProps} />
+        </SnackBarContextProvider>
       </ThemeProvider>
     </>
   );
