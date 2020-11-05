@@ -34,19 +34,6 @@ const TitleGroup = styled.div`
   margin-bottom: 5rem;
 `;
 
-const ContactForm = styled.form`
-  justify-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  margin-bottom: 3rem;
-
-  & > * {
-    margin-bottom: 2rem;
-  }
-`;
-
 const ContactDetails = styled.div`
   justify-self: flex-end;
   display: flex;
@@ -86,7 +73,6 @@ export {
   ContentWrapper,
   MapWrapper,
   TitleGroup,
-  ContactForm,
   ContactDetails,
   CompanyName,
   ContactItemsGroup,

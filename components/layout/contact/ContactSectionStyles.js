@@ -18,16 +18,12 @@ const FormWrapper = styled.div`
   justify-content: center;
 `;
 
-const FormGroup = styled.form`
+const TitleGroup = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
 
-  margin-top: 5rem;
-
-  & > * {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 5rem;
 `;
 
 const ImageWrapper = styled.div`
@@ -39,4 +35,4 @@ const ImageWrapper = styled.div`
   background-repeat: no-repeat;
 `;
 
-export { Section, FormGroup, FormWrapper, ImageWrapper };
+export { Section, TitleGroup, FormWrapper, ImageWrapper };
