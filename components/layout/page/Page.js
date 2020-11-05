@@ -1,5 +1,6 @@
 import Footer from "../footer/Footer";
 import NavBar from "../nav-bar/NavBar";
+import SnackBar from "../../snack-bar/SnackBar";
 
 import { Wrapper } from "./PageStyles";
 
@@ -17,6 +18,7 @@ const Page = ({ children }) => {
       {children}
 
       <Footer />
+      <SnackBar />
     </Wrapper>
   );
 };
