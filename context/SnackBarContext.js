@@ -4,10 +4,10 @@ const SnackBarContext = createContext();
 const SnackBarDispatchContext = createContext();
 
 const SnackBarContextProvider = ({ children }) => {
-  const [queue, addItem] = useState([]);
+  const [message, addItem] = useState("");
 
   return (
-    <SnackBarContext.Provider value={queue}>
+    <SnackBarContext.Provider value={message}>
       <SnackBarDispatchContext.Provider value={addItem}>
         {children}
       </SnackBarDispatchContext.Provider>
