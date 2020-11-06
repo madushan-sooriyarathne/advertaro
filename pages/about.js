@@ -2,6 +2,7 @@ import Page from "../components/layout/page/Page";
 import SpecialtiesSection from "../components/layout/specialties/SpecialtiesSection";
 import CTABanner from "../components/layout/cta-banner/CTABanner";
 import Header from "../components/layout/header/Header";
+import TitledDescription from "../components/layout/titled-description/TitledDescription";
 
 // put this item into some online CRM
 const specialties = [
@@ -47,6 +48,16 @@ const About = () => {
   return (
     <Page>
       <Header title="The creative agency created to do things differently." />
+      <TitledDescription
+        title="Advertaro Creative Agency"
+        subtitle="A independent creative marketing firm offering marketing solutions to sole business & merchandisers"
+        description={`A freelance company started in early 2019 order to consult small to mid-scale business on approaching to the respected market places via different platforms and expanded further as an organization named "Advertaro" in late 2019
+    
+      Currently involved in Travel, Leisure & Concierge sectors assisting on marketing protocols to maximize sales by maintaining revenue and yield managements. 
+
+      A target base marketing concept to follow targeting the right clientele on different platforms in the prime model advertaro go along to enable the best results what the client expects.
+      `}
+      />
       <SpecialtiesSection specialties={specialties} />
       <CTABanner
         title="Have a project in mind?"
