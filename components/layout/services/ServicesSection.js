@@ -38,7 +38,7 @@ const ServicesSection = () => {
         />
       </ThirdBox>
       <ButtonWrapper>
-        <CommonButtonDark text="Explore Our Services" url="/services" />
+        <CommonButtonDark text="Explore Our Services" url="/about#services" />
       </ButtonWrapper>
     </Section>
   );

@@ -6,7 +6,7 @@ import ImageContentBox from "../../image-content-box/ImageContentBox";
 
 const Specialties = ({ specialties }) => {
   return (
-    <Section>
+    <Section id="services">
       <TitleGroup>
         <MainHeading>Our Specialties</MainHeading>
         <SecondaryHeading>Why choose advertaro?</SecondaryHeading>

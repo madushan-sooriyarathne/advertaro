@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Section = styled.section`
   grid-column: content-start / content-end;
-  margin-bottom: 10rem;
+  padding: 10rem 0;
 
   display: grid;
   grid-template-rows: repeat(2, [col-start] max-content [col-end]);
