@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Section = styled.section`
   grid-column: content-start / content-end;
-  margin-top: ${(props) => `calc(${props.theme.navBarHeight} + 3rem)`};
   margin-bottom: 10rem;
 
   display: grid;
