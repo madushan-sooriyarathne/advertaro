@@ -51,12 +51,11 @@ const About = () => {
       <TitledDescription
         title="Advertaro Creative Agency"
         subtitle="A independent creative marketing firm offering marketing solutions to sole business & merchandisers"
-        description={`A freelance company started in early 2019 order to consult small to mid-scale business on approaching to the respected market places via different platforms and expanded further as an organization named "Advertaro" in late 2019
-    
-      Currently involved in Travel, Leisure & Concierge sectors assisting on marketing protocols to maximize sales by maintaining revenue and yield managements. 
-
-      A target base marketing concept to follow targeting the right clientele on different platforms in the prime model advertaro go along to enable the best results what the client expects.
-      `}
+        descriptions={[
+          `A freelance company started in early 2019 order to consult small to mid-scale business on approaching to the respected market places via different platforms and expanded further as an organization named "Advertaro" in late 2019`,
+          `Currently involved in Travel, Leisure & Concierge sectors assisting on marketing protocols to maximize sales by maintaining revenue and yield managements.`,
+          `A target base marketing concept to follow targeting the right clientele on different platforms in the prime model advertaro go along to enable the best results what the client expects.`,
+        ]}
       />
       <SpecialtiesSection specialties={specialties} />
       <CTABanner

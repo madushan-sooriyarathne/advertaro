@@ -4,10 +4,11 @@ import {
   Section,
   TitleGroup,
   Title,
+  DescriptionGroup,
   Description,
 } from "./TitledDescriptionStyles";
 
-const TitledDescription = ({ title, subtitle, description }) => {
+const TitledDescription = ({ title, subtitle, descriptions }) => {
   return (
     <Section>
       {title && (
@@ -16,7 +17,12 @@ const TitledDescription = ({ title, subtitle, description }) => {
           {subtitle && <SecondaryHeading>{subtitle}</SecondaryHeading>}
         </TitleGroup>
       )}
-      <Description>{description}</Description>
+
+      <DescriptionGroup>
+        {descriptions.map((para) => (
+          <Description>{para}</Description>
+        ))}
+      </DescriptionGroup>
     </Section>
   );
 };

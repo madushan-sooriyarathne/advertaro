@@ -31,8 +31,18 @@ const Title = styled(Heading)`
   color: ${(props) => props.theme.colorPrimary};
 `;
 
-const Description = styled.p`
+const DescriptionGroup = styled.div`
   grid-column: 2 / 3;
+
+  display: flex;
+  flex-direction: column;
+
+  & > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+`;
+
+const Description = styled.p`
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -43,4 +53,4 @@ const Description = styled.p`
   color: ${(props) => props.theme.colorSecondary};
 `;
 
-export { Section, TitleGroup, Title, Description };
+export { Section, TitleGroup, Title, DescriptionGroup, Description };
