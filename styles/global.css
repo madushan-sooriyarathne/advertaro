@@ -9,7 +9,9 @@
 html {
   font-family: "Overpass", sans-serif;
   font-size: 62.5%;
+  font-smooth: antialiased;
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
 }
 
 body {
