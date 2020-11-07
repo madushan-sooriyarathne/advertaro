@@ -16,6 +16,9 @@ const Container = styled.section`
       rgba(0, 0, 0, 0.7) 100%
     ),
     url("/static/img/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
 
 const CTAGroup = styled.div`
