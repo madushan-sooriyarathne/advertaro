@@ -5,7 +5,6 @@ const Section = styled.section`
   padding: 10rem 0;
 
   display: grid;
-  grid-template-rows: repeat(2, [col-start] max-content [col-end]);
   grid-auto-rows: min-content;
   gap: 5rem;
   justify-items: center;
@@ -19,10 +18,7 @@ const TitleGroup = styled.div`
 
 const ItemGroup = styled.div`
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    [item-start] minmax(min-content, 1fr) [item-end]
-  );
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
   gap: 5rem;
 `;
 
