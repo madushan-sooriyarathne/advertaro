@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 const Section = styled.section`
-  grid-column: full-start / full-end;
+  grid-column: content-start / content-end;
 
-  min-height: 100vh;
+  /* min-height: 100vh; */
   width: 100%;
-  padding: ${(props) =>
-    `calc(${props.theme.navBarHeight} + 5rem) 10rem 10rem 10rem`};
+  padding: ${(props) => `calc(${props.theme.navBarHeight} + 5rem) 0 10rem 0`};
 
-  display: grid;
-  grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
-  gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 `;
 
@@ -18,7 +17,8 @@ const ImageBox = styled.div`
   grid-column: col-start / col-end;
 
   width: 100%;
-  height: 100%;
+  padding-top: 55%;
+  margin-bottom: 5rem;
 
   background-image: ${(props) => `url(${props.image})`};
   background-position: center;
@@ -26,25 +26,39 @@ const ImageBox = styled.div`
   background-size: cover;
 `;
 
-const DetailsBox = styled.div`
-  grid-column: col-start 2 / col-end 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-`;
-
 const TitleGroup = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   margin-bottom: 5rem;
+
+  & > * {
+    text-align: center;
+  }
+`;
+
+const CaseStudiesIcon = styled.img`
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 1rem;
 `;
 
 const DetailsGroup = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10rem;
+
+  & > :not(:last-child) {
+    margin-bottom: 5rem;
+  }
+`;
+
+const ProjectInfoGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   & > :not(:last-child) {
     margin-bottom: 2rem;
@@ -57,17 +71,23 @@ const DetailItem = styled.div`
 `;
 
 const Title = styled.p`
-  font-size: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
   font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 2px;
 
   margin-bottom: 1rem;
 `;
 
-const Description = styled.p`
+const SubTitle = styled(Title)`
   font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+`;
+
+const Description = styled.p`
+  font-size: 1.6rem;
   font-weight: 500;
   text-align: justify;
   hyphens: auto;
@@ -75,13 +95,21 @@ const Description = styled.p`
   color: ${(props) => props.theme.colorSecondary};
 `;
 
+const SubDescription = styled(Description)`
+  font-weight: 400;
+  letter-spacing: 0;
+`;
+
 export {
   Section,
   ImageBox,
-  DetailsBox,
+  CaseStudiesIcon,
   TitleGroup,
   DetailsGroup,
+  ProjectInfoGroup,
   DetailItem,
   Title,
+  SubTitle,
   Description,
+  SubDescription,
 };
