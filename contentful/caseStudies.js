@@ -11,4 +11,11 @@ const fetchCaseStudies = async () => {
   return [];
 };
 
-export { fetchCaseStudies };
+const fetchCaseStudyById = async (id) => {
+  const entry = await client.getEntry(id);
+  if (entry.fields) return entry.fields;
+  console.error("error fetching the ase study for given id");
+  return {};
+};
+
+export { fetchCaseStudies, fetchCaseStudyById };
