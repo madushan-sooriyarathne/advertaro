@@ -17,11 +17,11 @@ const Index = () => {
         partners={[
           {
             img: "/static/img/partners/taylors-hill.png",
-            url: "/case-studies/taylors-hill",
+            name: "Taylors Hill Boutique Hotel",
           },
           {
             img: "/static/img/partners/clean-and-dusted.png",
-            url: "/case-studies/clean-and-dusted",
+            name: "Clean & Dusted",
           },
         ]}
       />

@@ -1,13 +1,7 @@
-import Link from "next/link";
-
 import { Box } from "./PartnerBoxStyles";
 
-const PartnerBox = ({ img, url }) => {
-  return (
-    <Link href={url}>
-      <Box image={img}> </Box>
-    </Link>
-  );
+const PartnerBox = ({ img, name }) => {
+  return <Box image={img}> </Box>;
 };
 
 export default PartnerBox;
