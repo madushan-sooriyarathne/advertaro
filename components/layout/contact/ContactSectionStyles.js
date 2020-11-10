@@ -5,9 +5,15 @@ const Section = styled.section`
 
   display: grid;
   grid-template-columns: [form-start] 1fr [form-end cover-start] 1fr [cover-end];
+  grid-auto-rows: max-content;
   gap: 10rem;
   min-height: 30vw;
   margin: 10rem 0 10rem 0;
+
+  ${(props) => props.theme.responsiveLow} {
+    grid-template-columns: [center-start] 1fr [center-end];
+    gap: 0rem;
+  }
 `;
 
 const FormWrapper = styled.div`
@@ -16,6 +22,10 @@ const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  ${(props) => props.theme.responsiveLow} {
+    grid-column: center-start / center-end;
+  }
 `;
 
 const TitleGroup = styled.div`
@@ -33,6 +43,10 @@ const ImageWrapper = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  ${(props) => props.theme.responsiveLow} {
+    visibility: hidden;
+  }
 `;
 
 export { Section, TitleGroup, FormWrapper, ImageWrapper };

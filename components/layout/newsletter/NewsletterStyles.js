@@ -10,6 +10,14 @@ const NewsletterSection = styled.section`
   background-color: ${(props) => props.theme.colorBg};
 
   padding: 10rem 0;
+
+  ${(props) => props.theme.responsiveLower} {
+    padding: 10rem;
+  }
+
+  ${(props) => props.theme.responsiveLowest} {
+    padding: 10rem 5rem;
+  }
 `;
 
 const TitleGroup = styled.div`
@@ -17,6 +25,10 @@ const TitleGroup = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
+
+  & > * {
+    text-align: center;
+  }
 `;
 
 const FormGroup = styled.form`
@@ -28,6 +40,14 @@ const FormGroup = styled.form`
 
   & > *:first-child {
     margin-right: 1rem;
+  }
+
+  ${(props) => props.theme.responsiveMedium} {
+    width: 80%;
+  }
+
+  ${(props) => props.theme.responsiveLower} {
+    width: 100%;
   }
 `;
 

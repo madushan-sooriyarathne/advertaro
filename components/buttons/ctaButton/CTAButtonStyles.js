@@ -22,6 +22,11 @@ const CallToActionButton = styled.button`
     color: ${(props) => props.theme.colorSecondary};
     background-color: ${(props) => props.theme.colorWhite};
   }
+
+  ${(props) => props.theme.responsiveLowest} {
+    font-size: 1.5rem;
+    border: ${(props) => `1px solid ${props.theme.colorWhite}`};
+  }
 `;
 
 export { CallToActionButton };

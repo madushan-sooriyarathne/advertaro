@@ -20,6 +20,14 @@ const ItemGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   gap: 5rem;
+
+  ${(props) => props.theme.responsiveMedium} {
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  }
+
+  ${(props) => props.theme.responsivePhone} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export { Section, TitleGroup, ItemGroup };

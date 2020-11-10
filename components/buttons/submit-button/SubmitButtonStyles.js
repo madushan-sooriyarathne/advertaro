@@ -13,6 +13,10 @@ const Button = styled(CallToActionButton)`
     background-color: ${(props) => props.theme.colorSecondary};
     transform: translateX(0.5rem);
   }
+
+  ${(props) => props.theme.responsiveLowest} {
+    border: ${(props) => `1px solid ${props.theme.colorSecondary}`};
+  }
 `;
 
 export { Button };

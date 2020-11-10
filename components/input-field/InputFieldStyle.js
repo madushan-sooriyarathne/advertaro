@@ -24,6 +24,10 @@ const Field = styled.input`
     font-size: 1.5rem;
     font-weight: 400;
   }
+
+  ${(props) => props.theme.responsiveLowest} {
+    border: ${(props) => `1px solid ${props.theme.colorSecondary}`};
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -45,6 +49,9 @@ const TextArea = styled.textarea`
     font-family: ${(props) => props.theme.fontPrimary};
     font-size: 1.5rem;
     font-weight: 400;
+  }
+  ${(props) => props.theme.responsiveLowest} {
+    border: ${(props) => `1px solid ${props.theme.colorSecondary}`};
   }
 `;
 

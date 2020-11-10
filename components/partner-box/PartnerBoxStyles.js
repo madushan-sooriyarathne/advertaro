@@ -23,6 +23,10 @@ const Box = styled.div`
     transform: translateY(-0.5rem);
     box-shadow: ${(props) => props.theme.boxShadowHover};
   }
+
+  ${(props) => props.theme.responsivePhone} {
+    box-shadow: ${(props) => props.theme.boxShadowNormal};
+  }
 `;
 
 export { Box };

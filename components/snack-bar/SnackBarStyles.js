@@ -19,6 +19,11 @@ const Bar = styled.div`
   background-color: ${(props) => props.theme.colorBlack};
 
   transition: bottom 0.2s ease-in-out;
+
+  ${(props) => props.theme.responsivePhone} {
+    max-width: calc(100vw - 6rem);
+    left: 2rem;
+  }
 `;
 
 const Message = styled.p`

@@ -53,6 +53,10 @@ const DetailsGroup = styled.div`
   & > :not(:last-child) {
     margin-bottom: 5rem;
   }
+
+  ${(props) => props.theme.responsiveLower} {
+    padding: 0;
+  }
 `;
 
 const ProjectInfoGroup = styled.div`

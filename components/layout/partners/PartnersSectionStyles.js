@@ -18,6 +18,10 @@ const HeadingGroup = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  & > * {
+    text-align: center;
+  }
 `;
 
 const Partners = styled.div`
@@ -29,6 +33,15 @@ const Partners = styled.div`
 
   & > *:not(:last-child) {
     margin-right: 5rem;
+  }
+
+  ${(props) => props.theme.responsivePhone} {
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
   }
 `;
 

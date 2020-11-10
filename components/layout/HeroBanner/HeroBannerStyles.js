@@ -19,6 +19,8 @@ const Container = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  padding: 10rem 5rem;
 `;
 
 const CTAGroup = styled.div`
@@ -28,6 +30,10 @@ const CTAGroup = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  & > * {
+    text-align: center;
+  }
 `;
 
 const Heading = styled.h2`
@@ -47,6 +53,10 @@ const SubHeading = styled.h1`
   letter-spacing: 2px;
   color: ${(props) => props.theme.colorWhite};
   text-transform: uppercase;
+
+  @media only screen and (max-width: 26.875em) {
+    font-size: 2.5rem;
+  }
 `;
 
 export { Container, CTAGroup, Heading, SubHeading };

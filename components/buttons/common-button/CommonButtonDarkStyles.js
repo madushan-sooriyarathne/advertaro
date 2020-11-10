@@ -10,6 +10,10 @@ const DarkButton = styled(CallToActionButton)`
     color: ${(props) => props.theme.colorWhite};
     background-color: ${(props) => props.theme.colorSecondary};
   }
+
+  ${(props) => props.theme.responsiveLowest} {
+    border: ${(props) => `1px solid ${props.theme.colorSecondary}`};
+  }
 `;
 
 export { DarkButton };
