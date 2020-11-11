@@ -8,7 +8,7 @@ const Section = styled.section`
   gap: 5rem;
   align-items: center;
   justify-items: center;
-  margin: 10rem 0;
+  padding: 10rem 0;
 `;
 
 const HeadingGroup = styled.div`
@@ -37,6 +37,7 @@ const Partners = styled.div`
 
   ${(props) => props.theme.responsivePhone} {
     flex-direction: column;
+    width: 100%;
 
     & > *:not(:last-child) {
       margin-right: 0;

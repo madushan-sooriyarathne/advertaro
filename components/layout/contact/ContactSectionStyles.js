@@ -8,7 +8,7 @@ const Section = styled.section`
   grid-auto-rows: max-content;
   gap: 10rem;
   min-height: 30vw;
-  margin: 10rem 0 10rem 0;
+  padding: 10rem 0;
 
   ${(props) => props.theme.responsiveLow} {
     grid-template-columns: [center-start] 1fr [center-end];

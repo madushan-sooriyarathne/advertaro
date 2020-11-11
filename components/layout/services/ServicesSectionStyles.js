@@ -12,7 +12,7 @@ const Section = styled.section`
     "i1 i2 i3"
     "bt bt bt";
   gap: 3rem;
-  margin: 10rem 0 10rem 0;
+  padding: 10rem 0;
 
   @media only screen and (max-width: 65.625em) {
     grid-template-areas:

@@ -32,7 +32,7 @@ const NavBar = ({ navLinks }) => {
     <HeadingWrapper>
       <NavBarWrapper>
         <Link href="/">
-          <Logo src="/static/img/advertaro-logo.svg" alt="advertaro logo" />
+          <Logo src="/static/img/svg/advertaro-logo.svg" alt="advertaro logo" />
         </Link>
 
         <NavLinkSet>{navLinks.map((link) => toggleActive(link))}</NavLinkSet>

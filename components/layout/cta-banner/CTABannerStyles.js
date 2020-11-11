@@ -17,6 +17,10 @@ const TitleGroup = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
+
+  & > * {
+    text-align: center;
+  }
 `;
 
 export { Section, TitleGroup };

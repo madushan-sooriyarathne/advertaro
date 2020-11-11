@@ -5,7 +5,9 @@ const FooterSection = styled.div`
 
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
-  grid-template-areas: "de na co";
+  grid-template-areas:
+    "de na co"
+    "ri ri ri";
   grid-auto-rows: max-content;
   gap: 5rem;
   align-items: start;
@@ -25,7 +27,8 @@ const FooterSection = styled.div`
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
     grid-template-areas:
       "de de"
-      "na co";
+      "na co"
+      "ri ri";
     justify-items: start;
     padding: 10rem;
   }
@@ -35,7 +38,8 @@ const FooterSection = styled.div`
     grid-template-areas:
       "de"
       "na"
-      "co";
+      "co"
+      "ri";
     padding: 10rem 5rem;
   }
 `;
@@ -179,6 +183,21 @@ const SocialMediaIcon = styled.svg`
   }
 `;
 
+const CopyrightGroup = styled.div`
+  grid-area: ri;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Copyright = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: ${(props) => props.theme.colorWhite};
+`;
+
 export {
   FooterSection,
   CompanyIntroGroup,
@@ -196,4 +215,6 @@ export {
   ContactItemText,
   SocialMediaIconGroup,
   SocialMediaIcon,
+  CopyrightGroup,
+  Copyright,
 };

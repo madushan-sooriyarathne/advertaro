@@ -78,6 +78,7 @@ const Title = styled.p`
   font-size: 3rem;
   font-weight: 700;
   font-family: ${(props) => props.theme.fontPrimary};
+  color: ${(props) => props.theme.colorSecondary};
   letter-spacing: 2px;
 
   margin-bottom: 1rem;

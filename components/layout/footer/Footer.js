@@ -17,6 +17,8 @@ import {
   ContactItemText,
   SocialMediaIconGroup,
   SocialMediaIcon,
+  CopyrightGroup,
+  Copyright,
 } from "./FooterStyles";
 
 const Footer = () => {
@@ -97,6 +99,11 @@ const Footer = () => {
           </a>
         </SocialMediaIconGroup>
       </ContactGroup>
+      <CopyrightGroup>
+        <Copyright>
+          {new Date().getFullYear()} © Advertaro Creative Agency.
+        </Copyright>
+      </CopyrightGroup>
     </FooterSection>
   );
 };
