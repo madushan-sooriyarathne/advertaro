@@ -34,16 +34,32 @@ class MainDocument extends Document {
   }
 }
 
-const getInitialProps = async ({ renderPage }) => {
+const getInitialProps = async (ctx) => {
   const sheet = new ServerStyleSheet();
+  const originalRenderPage = ctx.renderPage;
 
-  const page = renderPage((App) => (props) =>
-    sheet.collectStyles(<App {...props} />)
-  );
+  try {
+    ctx.renderPage = () =>
+      originalRenderPage({
+        enhanceApp: (App) => (props) => {
+          sheet.collectStyles(<App {...props} />);
+        },
+      });
 
-  const styleTags = sheet.getStyleElement();
+    const initialProps = await Document.getInitialProps(ctx);
 
-  return { ...page, styleTags };
+    return {
+      ...initialProps,
+      styles: (
+        <>
+          {initialProps.styles}
+          {sheet.getStyleElement()}
+        </>
+      ),
+    };
+  } finally {
+    sheet.seal();
+  }
 };
 
 export { getInitialProps };
