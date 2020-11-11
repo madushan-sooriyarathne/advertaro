@@ -11,7 +11,7 @@ const Page = ({ children }) => {
         navLinks={[
           { name: "Home", href: "/" },
           { name: "About", href: "/about" },
-          { name: "Case Studies", href: "/case-studies" },
+          { name: "Case Studies", href: "/casestudies" },
           { name: "contact", href: "/contact" },
         ]}
       />

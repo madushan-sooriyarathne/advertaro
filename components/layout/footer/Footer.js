@@ -41,7 +41,7 @@ const Footer = () => {
           <Link href="/about#services">
             <FooterNavLink>Our Services</FooterNavLink>
           </Link>
-          <Link href="/case-studies">
+          <Link href="/casestudies">
             <FooterNavLink>Case Studies</FooterNavLink>
           </Link>
           <Link href="/contact">
