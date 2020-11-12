@@ -19,12 +19,12 @@
   },
   "homepage": "https://advertaro.lk",
   "dependencies": {
-    "contentful": "^7.14.8",
-    "next": "^9.5.5",
+    "contentful": "^7.14.12",
+    "next": "^10.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-google-maps": "^9.4.5",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1"
