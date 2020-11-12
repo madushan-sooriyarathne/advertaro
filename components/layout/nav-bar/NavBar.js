@@ -5,9 +5,16 @@ import {
   NavLinkSet,
   ActiveNavLink,
   NavLink,
+  NavHamburger,
+  HamburgerSlice,
 } from "./NavBarStyles";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useContext } from "react";
+import {
+  NavBarContext,
+  NavBarDispatchContext,
+} from "../../../context/NavBarContext";
 
 const toggleActive = (navLink) => {
   const router = useRouter();
@@ -28,6 +35,13 @@ const toggleActive = (navLink) => {
 };
 
 const NavBar = ({ navLinks }) => {
+  const navBarOpen = useContext(NavBarContext);
+  const setNavBarOpen = useContext(NavBarDispatchContext);
+
+  const handleClick = (event) => {
+    setNavBarOpen(!navBarOpen);
+  };
+
   return (
     <HeadingWrapper>
       <NavBarWrapper>
@@ -36,6 +50,9 @@ const NavBar = ({ navLinks }) => {
         </Link>
 
         <NavLinkSet>{navLinks.map((link) => toggleActive(link))}</NavLinkSet>
+        <NavHamburger onClick={handleClick}>
+          <HamburgerSlice open={navBarOpen} />
+        </NavHamburger>
       </NavBarWrapper>
     </HeadingWrapper>
   );

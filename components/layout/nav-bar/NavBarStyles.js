@@ -13,13 +13,18 @@ const HeadingWrapper = styled.header`
   width: 100vw;
   min-height: ${(props) => props.theme.navBarHeight};
   padding: 3rem 0;
-  z-index: 10;
+  z-index: 200;
 `;
 
 const NavBarWrapper = styled.div`
   grid-column: content-start / content-end;
   display: grid;
-  grid-template-columns: [logo-start] 1fr [logo-end nav-start] 1fr [nav-end];
+  grid-template-columns:
+    [logo-start] minmax(min-content, 1fr) [logo-end nav-start] minmax(
+      max-content,
+      1fr
+    )
+    [nav-end];
   gap: 5rem;
   justify-items: start;
   align-items: center;
@@ -29,6 +34,10 @@ const Logo = styled.img`
   grid-column: logo-start / logo-end;
   height: 4rem;
   cursor: pointer;
+
+  ${(props) => props.theme.responsivePhone} {
+    height: 3rem;
+  }
 `;
 
 const NavLinkSet = styled.nav`
@@ -43,6 +52,10 @@ const NavLinkSet = styled.nav`
   & > *:not(:last-child) {
     margin-right: 4rem;
   }
+
+  ${(props) => props.theme.responsiveLower} {
+    display: none;
+  }
 `;
 
 const NavLink = styled.a`
@@ -56,6 +69,7 @@ const NavLink = styled.a`
   transition: color 0.2s ease-in-out;
   cursor: pointer;
   position: relative;
+  mix-blend-mode: exclusion;
 
   &:before {
     content: "";
@@ -96,6 +110,55 @@ const ActiveNavLink = styled(NavLink)`
   }
 `;
 
+const NavHamburger = styled.div`
+  grid-column: nav-start / nav-end;
+  justify-self: end;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (min-width: 37.5625em) {
+    display: none;
+  }
+`;
+
+const HamburgerSlice = styled.span`
+  position: relative;
+  background-color: ${(props) =>
+    props.open ? "transparent" : props.theme.colorGray};
+
+  &,
+  &::before,
+  &::after {
+    height: 2px;
+    width: 3rem;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    background-color: ${(props) => props.theme.colorGray};
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s;
+  }
+
+  &::before {
+    top: ${(props) => (props.open ? "0" : "-1rem")};
+    transform: ${(props) => (props.open ? "rotate(-135deg)" : "rotate(0deg)")};
+  }
+
+  &::after {
+    top: ${(props) => (props.open ? "0" : "1rem")};
+    transform: ${(props) => (props.open ? "rotate(135deg)" : "rotate(0deg)")};
+  }
+`;
+
 export {
   HeadingWrapper,
   NavBarWrapper,
@@ -103,4 +166,6 @@ export {
   NavLinkSet,
   ActiveNavLink,
   NavLink,
+  NavHamburger,
+  HamburgerSlice,
 };

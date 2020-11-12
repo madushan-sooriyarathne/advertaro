@@ -7,6 +7,7 @@ import theme from "../styles/theme";
 import SnackBarContextProvider from "../context/SnackBarContext";
 
 import "../styles/global.css";
+import NavBarContextProvider from "../context/NavBarContext";
 
 const MainApp = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -20,7 +21,9 @@ const MainApp = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <SnackBarContextProvider>
-          <Component {...pageProps} />
+          <NavBarContextProvider>
+            <Component {...pageProps} />
+          </NavBarContextProvider>
         </SnackBarContextProvider>
       </ThemeProvider>
     </>

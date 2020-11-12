@@ -1,0 +1,59 @@
+import styled from "styled-components";
+
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: ${(props) => (props.open ? "transformY(0)" : "translateY(-100%)")};
+  z-index: 100;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: ${(props) => props.theme.colorSecondary};
+  transition: transform 0.3s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (min-width: 37.5625em) {
+    display: none;
+  }
+`;
+
+const NavLinkWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`;
+
+const NavLink = styled.a`
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: ${(props) => props.theme.fontPrimary};
+  text-transform: uppercase;
+  text-decoration: none;
+  color: ${(props) => props.theme.colorWhite};
+  outline: none;
+  background-image: ${(props) => `linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    ${props.theme.colorWhite} 50%
+  )`};
+  background-size: 230%;
+  transition: all 0.4s;
+
+  padding: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background-position: 100%;
+    color: ${(props) => props.theme.colorSecondary};
+    transform: translateX(1rem);
+  }
+`;
+
+export { Overlay, NavLinkWrapper, NavLink };
