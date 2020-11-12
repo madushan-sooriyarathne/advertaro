@@ -43,7 +43,7 @@ const NavBar = ({ navLinks }) => {
   };
 
   return (
-    <HeadingWrapper>
+    <HeadingWrapper open={navBarOpen}>
       <NavBarWrapper>
         <Link href="/">
           <Logo src="/static/img/svg/advertaro-logo.svg" alt="advertaro logo" />

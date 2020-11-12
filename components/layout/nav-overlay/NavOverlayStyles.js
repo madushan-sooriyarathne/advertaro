@@ -9,13 +9,22 @@ const Overlay = styled.div`
 
   width: 100vw;
   height: 100vh;
+  padding: 20rem 10rem;
 
-  background-color: ${(props) => props.theme.colorSecondary};
+  background: linear-gradient(
+    170deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(37, 16, 4, 0.95) 35%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   transition: transform 0.3s ease-in-out;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 
   @media only screen and (min-width: 37.5625em) {
     display: none;
@@ -25,7 +34,7 @@ const Overlay = styled.div`
 const NavLinkWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
 `;
 
@@ -43,7 +52,7 @@ const NavLink = styled.a`
     transparent 50%,
     ${props.theme.colorWhite} 50%
   )`};
-  background-size: 230%;
+  background-size: 250%;
   transition: all 0.4s;
 
   padding: 2rem;

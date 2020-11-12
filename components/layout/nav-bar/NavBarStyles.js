@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HeadingWrapper = styled.header`
-  position: absolute;
+  position: ${(props) => (props.open ? "fixed" : "absolute")};
   top: 0;
   display: grid;
   grid-template-columns:
