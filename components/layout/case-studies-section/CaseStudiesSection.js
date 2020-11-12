@@ -18,6 +18,7 @@ const CaseStudiesSection = ({ caseStudies }) => {
             title={item.projectName}
             image={item.cover.fields.file.url}
             id={item.id}
+            key={item.id}
           />
         ))}
       </ItemGroup>

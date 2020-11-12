@@ -6,7 +6,7 @@ const FooterSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
   grid-template-areas:
-    "de na co"
+    "ci na co"
     "ri ri ri";
   grid-auto-rows: max-content;
   gap: 5rem;
@@ -26,7 +26,7 @@ const FooterSection = styled.div`
   ${(props) => props.theme.responsiveLow} {
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
     grid-template-areas:
-      "de de"
+      "ci ci"
       "na co"
       "ri ri";
     justify-items: start;
@@ -36,7 +36,7 @@ const FooterSection = styled.div`
   ${(props) => props.theme.responsivePhone} {
     grid-template-columns: minmax(min-content, 1fr);
     grid-template-areas:
-      "de"
+      "ci"
       "na"
       "co"
       "ri";
@@ -45,7 +45,7 @@ const FooterSection = styled.div`
 `;
 
 const CompanyIntroGroup = styled.div`
-  grid-area: de;
+  grid-area: ci;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

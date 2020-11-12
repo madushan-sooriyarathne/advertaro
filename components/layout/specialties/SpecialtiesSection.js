@@ -17,6 +17,7 @@ const Specialties = ({ specialties }) => {
             image={item.image}
             title={item.title}
             description={item.description}
+            key={item.title.toLowerCase()}
           />
         ))}
       </ItemGroup>

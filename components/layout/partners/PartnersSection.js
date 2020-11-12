@@ -18,7 +18,11 @@ const PartnerSection = ({ partners }) => {
       </HeadingGroup>
       <Partners>
         {partners.map((partner) => (
-          <PartnerBox img={partner.img} name={partner.name} key={partner.url} />
+          <PartnerBox
+            img={partner.img}
+            name={partner.name}
+            key={partner.name.toLowerCase().split(" ").join("_")}
+          />
         ))}
       </Partners>
       <ButtonWrapper>

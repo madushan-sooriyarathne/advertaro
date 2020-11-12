@@ -14,13 +14,13 @@ const toggleActive = (navLink) => {
 
   if (router.pathname === navLink.href) {
     return (
-      <Link href={navLink.href}>
+      <Link href={navLink.href} key={navLink.name.toLowerCase()}>
         <ActiveNavLink>{navLink.name}</ActiveNavLink>
       </Link>
     );
   } else {
     return (
-      <Link href={navLink.href}>
+      <Link href={navLink.href} key={navLink.name.toLowerCase()}>
         <NavLink>{navLink.name}</NavLink>
       </Link>
     );
