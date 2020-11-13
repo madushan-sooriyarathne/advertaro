@@ -61,8 +61,9 @@ const NavLinkSet = styled.nav`
 const NavLink = styled.a`
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
   font-family: ${(props) => props.theme.fontPrimary};
   outline: none;
   color: ${(props) => props.theme.colorGray};

@@ -6,7 +6,7 @@ const CallToActionButton = styled.button`
   border: ${(props) => `2px solid ${props.theme.colorWhite}`};
 
   outline: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 1px;

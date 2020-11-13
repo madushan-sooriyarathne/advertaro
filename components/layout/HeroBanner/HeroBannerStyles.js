@@ -47,7 +47,7 @@ const Heading = styled.h2`
 `;
 
 const SubHeading = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 600;
   font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 2px;

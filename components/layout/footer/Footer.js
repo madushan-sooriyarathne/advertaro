@@ -21,7 +21,7 @@ import {
   Copyright,
 } from "./FooterStyles";
 
-const Footer = () => {
+const Footer = ({ navLinks }) => {
   return (
     <FooterSection>
       <CompanyIntroGroup>
@@ -35,18 +35,11 @@ const Footer = () => {
       <FooterNavigationGroup>
         <FooterColumnHeading>Links</FooterColumnHeading>
         <FooterLinksGroup>
-          <Link href="/about">
-            <FooterNavLink>About Us</FooterNavLink>
-          </Link>
-          <Link href="/about#services">
-            <FooterNavLink>Our Services</FooterNavLink>
-          </Link>
-          <Link href="/casestudies">
-            <FooterNavLink>Case Studies</FooterNavLink>
-          </Link>
-          <Link href="/contact">
-            <FooterNavLink>Contact Us</FooterNavLink>
-          </Link>
+          {navLinks.map((item) => (
+            <Link href={item.href} key={item.name.toLowerCase()}>
+              <FooterNavLink>{item.name}</FooterNavLink>
+            </Link>
+          ))}
         </FooterLinksGroup>
       </FooterNavigationGroup>
       <ContactGroup>
