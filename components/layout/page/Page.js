@@ -4,12 +4,13 @@ import SnackBar from "../../snack-bar/SnackBar";
 
 import { Wrapper } from "./PageStyles";
 import NavOverlay from "../nav-overlay/NavOverlay";
+import Floater from "../floater/Floater";
 
 const Page = ({ children }) => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Case Studies", href: "/casestudies" },
+    { name: "Case Studies", href: "/case-studies" },
     { name: "contact", href: "/contact" },
   ];
 
@@ -19,8 +20,9 @@ const Page = ({ children }) => {
       <NavBar navLinks={navLinks} />
       {children}
 
-      <Footer />
+      <Footer navLinks={navLinks} />
       <SnackBar />
+      <Floater />
     </Wrapper>
   );
 };
