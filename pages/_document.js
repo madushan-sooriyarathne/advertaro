@@ -50,6 +50,45 @@ class MainDocument extends Document {
   gtag('config', 'G-KQKFG2HJGR');`,
             }}
           />
+
+          <link rel="manifest" href="manifest.json" />
+
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="application-name" content="Advertaro" />
+          <meta name="apple-mobile-web-app-title" content="Advertaro" />
+          <meta name="theme-color" content="#e85d04" />
+          <meta name="msapplication-navbutton-color" content="#e85d04" />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+          />
+          <meta name="msapplication-starturl" content="/" />
+
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="/static/icons/icon-512x512.png"
+          />
+          <link
+            rel="apple-touch-icon"
+            type="image/png"
+            sizes="512x512"
+            href="/static/icons/icon-512x512.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/static/icons/icon-192x192.png"
+          />
+          <link
+            rel="apple-touch-icon"
+            type="image/png"
+            sizes="192x192"
+            href="/static/icons/icon-192x192.png"
+          ></link>
         </Head>
         <body style={{ visibility: "hidden" }}>
           <Main />
