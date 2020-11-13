@@ -20,7 +20,9 @@ const TitledDescription = ({ title, subtitle, descriptions }) => {
 
       <DescriptionGroup>
         {descriptions.map((para) => (
-          <Description>{para}</Description>
+          <Description key={Math.random().toString(36).substring(7)}>
+            {para}
+          </Description>
         ))}
       </DescriptionGroup>
     </Section>
