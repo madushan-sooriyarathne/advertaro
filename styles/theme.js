@@ -6,7 +6,7 @@ const theme = {
   colorTertiary: "#eae2b7",
   colorWhite: "#fff",
   colorBlack: "#000",
-  colorGray: "#b7b7a4",
+  colorGray: "#6c757d",
   colorBg: "#f8edeb",
   fontPrimary: "'Montserrat', sans-serif",
   fontSecondary: "'Overpass', sans-serif",
