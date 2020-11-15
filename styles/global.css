@@ -1,3 +1,101 @@
+/* Fonts */
+
+@font-face {
+  font-family: "SF UI Text ";
+  font-style: normal;
+  font-weight: 400;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  font-style: italic;
+  font-weight: 400;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  font-style: normal;
+  font-weight: 300;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  font-style: italic;
+  font-weight: 300;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  font-style: normal;
+  font-weight: 500;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  font-style: normal;
+  font-weight: 600;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  font-style: italic;
+  font-weight: 700;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Text";
+  font-style: normal;
+  font-weight: 800;
+  src: local("SF UI Text"),
+    url("/static/fonts/SFUIText-Heavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SF UI Display"),
+    url("/static/fonts/sf-ui-display-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  font-style: normal;
+  font-weight: 800;
+  src: local("SF UI Display"),
+    url("/static/fonts/sf-ui-display-heavy.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  font-style: normal;
+  font-weight: 900;
+  src: local("SF UI Display"),
+    url("/static/fonts/sf-ui-display-black.woff") format("woff");
+}
+
 *,
 *::after,
 *::before {
@@ -7,8 +105,10 @@
 }
 
 html {
-  font-family: "Overpass", sans-serif;
+  font-family: "SF UI Text", sans-serif;
   font-size: 62.5%;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   font-smooth: antialiased;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;

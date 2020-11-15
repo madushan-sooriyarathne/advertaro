@@ -8,8 +8,8 @@ const theme = {
   colorBlack: "#000",
   colorGray: "#6c757d",
   colorBg: "#f8edeb",
-  fontPrimary: "'Montserrat', sans-serif",
-  fontSecondary: "'Overpass', sans-serif",
+  fontPrimary: "'SF UI Text', sans-serif",
+  fontSecondary: "'SF UI Display', sans-serif",
   boxShadowNormal: "0 4px 8px 4px rgba(0, 0, 0, 0.1)",
   boxShadowHover: "0 8px 16px 4px rgba(0, 0, 0, 0.1)",
   gridTemplateColumns:
