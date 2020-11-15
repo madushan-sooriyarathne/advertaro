@@ -41,8 +41,8 @@ const Title = styled.h3`
 
   font-size: 4rem;
   font-weight: 900;
-  letter-spacing: 2px;
-  font-family: ${(props) => props.theme.fontPrimary};
+  letter-spacing: 1px;
+  font-family: ${(props) => props.theme.fontSecondary};
   color: ${(props) => props.theme.colorWhite};
   text-align: center;
 `;

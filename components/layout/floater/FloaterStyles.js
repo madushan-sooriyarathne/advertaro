@@ -8,6 +8,7 @@ const Button = styled.div`
   visibility: ${(props) => (props.show ? "visible" : "hidden")};
   padding: 1.5rem;
   z-index: 2;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +23,10 @@ const Button = styled.div`
   &:hover {
     transform: translateY(-3px);
     box-shadow: ${(props) => props.theme.boxShadowHover};
+  }
+
+  ${(props) => props.theme.responsiveLower} {
+    padding: 1rem;
   }
 `;
 

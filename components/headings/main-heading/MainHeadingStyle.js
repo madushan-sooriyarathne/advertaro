@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Heading = styled.h1`
-  font-size: 5rem;
-  font-weight: 900;
-  font-family: ${(props) => props.theme.fontPrimary};
-  letter-spacing: 3px;
+  font-size: 5.6rem;
+  font-weight: 700;
+  font-family: ${(props) => props.theme.fontSecondary};
+  letter-spacing: 0.5px;
   color: ${(props) => props.theme.colorSecondary};
 
   ${(props) => props.theme.responsiveLower} {

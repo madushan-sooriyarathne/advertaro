@@ -61,36 +61,15 @@ const NavLinkSet = styled.nav`
 const NavLink = styled.a`
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: 2px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
   font-family: ${(props) => props.theme.fontPrimary};
   outline: none;
   color: ${(props) => props.theme.colorGray};
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s ease-in-out;
   cursor: pointer;
   position: relative;
-  mix-blend-mode: exclusion;
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0.8rem;
-    background-color: ${(props) => props.theme.colorPrimaryLite};
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    transform: rotate(1deg);
-
-    transition: width 0.3s ease-in-out;
-  }
-
-  &:hover {
-    &:before {
-      width: 100%;
-    }
-  }
 
   &:after {
     position: absolute;
@@ -102,6 +81,10 @@ const NavLink = styled.a`
     height: 0.5rem;
     border-radius: 50%;
     background-color: transparent;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.colorPrimaryLite};
   }
 `;
 

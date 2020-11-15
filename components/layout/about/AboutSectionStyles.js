@@ -22,14 +22,14 @@ const TitleGroup = styled.div`
 `;
 
 const Description = styled.p`
-  width: 50%;
+  width: 40%;
 
-  font-size: 1.8rem;
-  font-weight: 500;
-  font-family: ${(props) => props.theme.fontSecondary};
-  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: ${(props) => props.theme.fontPrimary};
+  letter-spacing: 0.5px;
   text-align: center;
-  color: ${(props) => props.theme.colorBlack};
+  color: ${(props) => props.theme.colorSecondary};
 
   ${(props) => props.theme.responsiveHigher} {
     width: 80%;

@@ -7,7 +7,7 @@ const CallToActionButton = styled.button`
 
   outline: none;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 1px;
   text-decoration: none;

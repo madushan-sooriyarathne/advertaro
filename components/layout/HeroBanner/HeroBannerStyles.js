@@ -39,20 +39,19 @@ const CTAGroup = styled.div`
 const Heading = styled.h2`
   font-size: 7rem;
   font-weight: 900;
-  font-family: ${(props) => props.theme.fontPrimary};
+  font-family: ${(props) => props.theme.fontSecondary};
   letter-spacing: 3px;
-  color: ${(props) => props.theme.colorPrimary};
   text-transform: uppercase;
+  color: ${(props) => props.theme.colorPrimary};
   margin-bottom: 2rem;
 `;
 
 const SubHeading = styled.h1`
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 400;
   font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 2px;
   color: ${(props) => props.theme.colorWhite};
-  text-transform: uppercase;
 
   @media only screen and (max-width: 26.875em) {
     font-size: 2.5rem;

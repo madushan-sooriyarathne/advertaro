@@ -43,9 +43,9 @@ const DescriptionGroup = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 
   text-align: justify;
   hyphens: auto;

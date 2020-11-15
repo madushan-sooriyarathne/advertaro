@@ -64,10 +64,9 @@ const ContactDetails = styled.div`
 `;
 
 const CompanyName = styled.p`
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  font-family: ${(props) => props.theme.fontPrimary};
-  letter-spacing: 2px;
+  font-family: ${(props) => props.theme.fontSecondary};
   color: ${(props) => props.theme.colorPrimary};
   margin-bottom: 1.5rem;
 `;
@@ -84,8 +83,8 @@ const ContactItemsGroup = styled.div`
 `;
 
 const ContactItem = styled.div`
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 300;
   color: ${(props) => props.theme.colorSecondary};
 `;
 

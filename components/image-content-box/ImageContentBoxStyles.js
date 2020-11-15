@@ -17,8 +17,8 @@ const Image = styled.img`
 `;
 
 const BoxTitle = styled.h3`
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 600;
   font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 1px;
   color: ${(props) => props.theme.colorSecondary};
@@ -27,10 +27,10 @@ const BoxTitle = styled.h3`
 `;
 
 const Description = styled.p`
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.5px;
-  font-family: ${(props) => props.theme.fontSecondary};
+  font-family: ${(props) => props.theme.fontPrimary};
   line-height: 2.4rem;
 
   color: ${(props) => props.theme.colorSecondary};

@@ -48,7 +48,7 @@ const DetailsGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 10rem;
+  padding: 0 15rem;
 
   & > :not(:last-child) {
     margin-bottom: 5rem;
@@ -77,32 +77,29 @@ const DetailItem = styled.div`
 const Title = styled.p`
   font-size: 3rem;
   font-weight: 700;
-  font-family: ${(props) => props.theme.fontPrimary};
-  color: ${(props) => props.theme.colorSecondary};
-  letter-spacing: 2px;
+  font-family: ${(props) => props.theme.fontSecondary};
+  color: ${(props) => props.theme.colorPrimaryDark};
 
   margin-bottom: 1rem;
 `;
 
 const SubTitle = styled(Title)`
   font-size: 1.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 700;
   letter-spacing: 1px;
 `;
 
 const Description = styled.p`
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 400;
   text-align: justify;
   hyphens: auto;
-  letter-spacing: 1px;
   color: ${(props) => props.theme.colorSecondary};
 `;
 
 const SubDescription = styled(Description)`
   font-weight: 400;
-  letter-spacing: 0;
+  font-size: 1.2rem;
 `;
 
 export {

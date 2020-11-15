@@ -17,10 +17,10 @@ const FooterSection = styled.div`
     rgba(169, 28, 115, 1) 21.6%,
     rgba(219, 112, 54, 1) 92.2%
   );
-  padding: 10rem 30rem;
+  padding: 10rem 40rem 5rem 40rem;
 
-  @media only screen and (max-width: 65.625em) {
-    padding: 10rem 20rem;
+  ${(props) => props.theme.responsiveHighest} {
+    padding: 10rem 20rem 5rem 20rem;
   }
 
   ${(props) => props.theme.responsiveLow} {
@@ -53,19 +53,17 @@ const CompanyIntroGroup = styled.div`
 `;
 
 const CompanyName = styled.h2`
-  font-size: 3.5rem;
-  font-weight: 900;
-  font-family: ${(props) => props.theme.fontPrimary};
-  letter-spacing: 3px;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: ${(props) => props.theme.fontSecondary};
   color: ${(props) => props.theme.colorWhite};
   margin-bottom: 2rem;
 `;
 
 const CompanyDescription = styled.p`
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: ${(props) => props.theme.colorWhite};
-  letter-spacing: 1px;
 `;
 
 const FooterNavigationGroup = styled.div`
@@ -88,8 +86,8 @@ const FooterLinksGroup = styled.div`
 `;
 
 const FooterColumnHeading = styled.h3`
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 600;
   font-family: ${(props) => props.theme.fontPrimary};
   text-transform: uppercase;
   color: ${(props) => props.theme.colorWhite};
@@ -99,18 +97,21 @@ const FooterColumnHeading = styled.h3`
 `;
 
 const FooterNavLink = styled.a`
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: ${(props) => props.theme.colorWhite};
+  background-color: transparent;
   outline: none;
   text-decoration: none;
   cursor: pointer;
   border-bottom: 1px solid transparent;
-  transition: transform 0.2s ease-in, border-bottom 0.2s ease-in-out;
+  transition: transform 0.2s ease-in, border-bottom 0.2s ease-in-out,
+    background-color 0.2s ease;
 
   &:hover {
     transform: translateX(3px);
     border-bottom: ${(props) => `1px solid ${props.theme.colorWhite}`};
+    background-color: rgba(255, 255, 255, 0.1);
   }
 `;
 
@@ -123,10 +124,9 @@ const ContactGroup = styled.div`
 `;
 
 const ContactDetailsHeading = styled.p`
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
-  font-family: ${(props) => props.theme.fontPrimary};
-  letter-spacing: 2px;
+  font-family: ${(props) => props.theme.fontSecondary};
   color: ${(props) => props.theme.colorWhite};
   margin-bottom: 2rem;
 `;
@@ -147,14 +147,14 @@ const ContactItem = styled.div`
 `;
 
 const ContactIcon = styled.svg`
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   fill: ${(props) => props.theme.colorWhite};
 `;
 
 const ContactItemText = styled.p`
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: ${(props) => props.theme.colorWhite};
 `;
 
@@ -164,22 +164,18 @@ const SocialMediaIconGroup = styled.div`
   margin-top: 2rem;
 
   & > *:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 `;
 
 const SocialMediaIcon = styled.svg`
-  width: 5rem;
+  width: 3rem;
   height: 5rem;
-  padding: 1rem;
-  border: ${(props) => `2px solid ${props.theme.colorWhite}`};
-  background-color: rgba(255, 255, 255, 0.1);
   fill: ${(props) => props.theme.colorWhite};
-  transition: fill 0.2s ease-in, background-color 0.2s ease-in;
+  transition: transform 0.2s ease-in;
 
   &:hover {
-    fill: ${(props) => props.theme.colorPrimary};
-    background-color: ${(props) => props.theme.colorWhite};
+    transform: rotate(5deg) scale(1.05);
   }
 `;
 
@@ -192,9 +188,9 @@ const CopyrightGroup = styled.div`
 `;
 
 const Copyright = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  letter-spacing: 1px;
+  font-style: italic;
   color: ${(props) => props.theme.colorWhite};
 `;
 

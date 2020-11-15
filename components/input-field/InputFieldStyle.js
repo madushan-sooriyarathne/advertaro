@@ -12,7 +12,7 @@ const Field = styled.input`
   height: 100%;
   padding: 1rem 1rem;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 500;
   color: ${(props) => props.theme.colorSecondary};
   background-color: transparent;
   outline: none;
@@ -22,7 +22,7 @@ const Field = styled.input`
   &::placeholder {
     font-family: ${(props) => props.theme.fontPrimary};
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   ${(props) => props.theme.responsiveLowest} {
@@ -37,7 +37,7 @@ const TextArea = styled.textarea`
   max-height: 14rem;
   padding: 1rem 1rem;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   color: ${(props) => props.theme.colorSecondary};
   background-color: transparent;
   resize: none;
@@ -48,7 +48,7 @@ const TextArea = styled.textarea`
   &::placeholder {
     font-family: ${(props) => props.theme.fontPrimary};
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
   }
   ${(props) => props.theme.responsiveLowest} {
     border: ${(props) => `1px solid ${props.theme.colorSecondary}`};

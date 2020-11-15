@@ -10,6 +10,7 @@ const Page = ({ children }) => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "contact", href: "/contact" },
   ];

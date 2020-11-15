@@ -94,7 +94,8 @@ const Footer = ({ navLinks }) => {
       </ContactGroup>
       <CopyrightGroup>
         <Copyright>
-          {new Date().getFullYear()} © Advertaro Creative Agency.
+          {new Date().getFullYear()} © Advertaro Creative Agency. All rights
+          reserved.
         </Copyright>
       </CopyrightGroup>
     </FooterSection>
