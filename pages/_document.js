@@ -32,10 +32,6 @@ class MainDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Overpass:ital,wght@0,200;0,400;0,600;0,700;0,900;1,900&display=swap"
-            rel="stylesheet"
-          ></link>
           {this.props.styleTags}
           <script
             async
