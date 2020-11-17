@@ -13,13 +13,15 @@ const Overlay = styled.div`
 
   background: linear-gradient(
     170deg,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(37, 16, 4, 0.95) 35%,
-    rgba(0, 0, 0, 0.95) 100%
+    rgba(0, 0, 0, 1) 0%,
+    rgba(37, 16, 4, 1) 35%,
+    rgba(0, 0, 0, 1) 100%
   );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  backdrop-filter: blur(10px);
+
   transition: transform 0.3s ease-in-out;
 
   display: flex;

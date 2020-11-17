@@ -5,6 +5,7 @@ import SnackBar from "../../snack-bar/SnackBar";
 import { Wrapper } from "./PageStyles";
 import NavOverlay from "../nav-overlay/NavOverlay";
 import Floater from "../floater/Floater";
+import PageOverlay from "../page-overlay/PageOverlay";
 
 const Page = ({ children }) => {
   const navLinks = [
@@ -17,6 +18,7 @@ const Page = ({ children }) => {
 
   return (
     <Wrapper>
+      <PageOverlay />
       <NavOverlay navLinks={navLinks} />
       <NavBar navLinks={navLinks} />
       {children}
