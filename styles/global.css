@@ -109,7 +109,7 @@ html {
   font-size: 62.5%;
   font-weight: 400;
   letter-spacing: 0.5px;
-  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
