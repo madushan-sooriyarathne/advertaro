@@ -38,6 +38,11 @@ const NavLinkWrapper = styled.div`
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
+
+  opacity: ${(props) => (props.open ? 1 : 0)};
+  transform: ${(props) => (props.open ? "translateX(0)" : "translateX(-10px)")};
+
+  transition: opacity 0.2s ease-in-out 0.3s, transform 0.5s ease-in-out 0.3s;
 `;
 
 const NavLink = styled.a`

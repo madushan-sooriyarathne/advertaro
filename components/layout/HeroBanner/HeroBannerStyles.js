@@ -1,5 +1,18 @@
 import styled, { keyframes } from "styled-components";
 
+const SlideIn = keyframes`
+from {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+`;
+
 const Container = styled.section`
   grid-column: full-start / full-end;
 
@@ -69,6 +82,14 @@ const CTAGroup = styled.div`
     align-items: center;
     padding: 10rem;
   }
+
+  /* target the button at the last of element list */
+  & > *:last-child {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: ${SlideIn} ease-in forwards 0.3s;
+    animation-delay: 0.7s;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -99,6 +120,11 @@ const Heading = styled.h2`
   letter-spacing: 0.5px;
   color: ${(props) => props.theme.colorPrimary};
   margin-bottom: 2rem;
+
+  transform: translateX(-10px);
+  opacity: 0;
+  animation: ${SlideIn} ease-in forwards 0.3s;
+  animation-delay: 0.5s;
 `;
 
 const SubHeading = styled.h1`
@@ -107,6 +133,11 @@ const SubHeading = styled.h1`
   font-family: ${(props) => props.theme.fontPrimary};
   letter-spacing: 0.5px;
   color: ${(props) => props.theme.colorWhite};
+
+  transform: translateX(-10px);
+  opacity: 0;
+  animation: ${SlideIn} ease-in forwards 0.3s;
+  animation-delay: 0.3s;
 
   @media only screen and (max-width: 26.875em) {
     font-size: 2.5rem;

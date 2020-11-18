@@ -25,7 +25,7 @@ const NavOverlay = ({ navLinks }) => {
 
   return (
     <Overlay open={NavBarOpen}>
-      <NavLinkWrapper>
+      <NavLinkWrapper open={NavBarOpen}>
         {navLinks.map((item) => (
           <Link href={item.href} key={item.name.toLowerCase()}>
             <NavLink>{item.name}</NavLink>
