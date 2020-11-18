@@ -1,34 +1,27 @@
-const nodeMailer = require("nodemailer");
+import {
+  generateInquireEmailDetails,
+  sendEmail,
+} from "../../utils/emailHandler";
+import { subscribeUser } from "../../utils/subscriptionHandler";
 
-// configs
-const mailConfig = {
-  host: process.env.EMAIL_HOST,
-  port: process.env.EMAIL_PORT,
-  auth: {
-    user: process.env.EMAIL_ADDRESS,
-    pass: process.env.EMAIL_PASSWORD,
-  },
-};
-
-// creating the mail transport
-const mailTransport = nodeMailer.createTransport(mailConfig);
-
-// api route
 const handler = (req, res) => {
   if (req.method === "POST") {
     // extract the data from body
-    const { name, email, company, message } = req.body.inquiryData;
+    const { name, email, company, message } = req.body;
 
     if (name && email && message) {
-      const emailDetails = {
-        from: email,
-        to: "sooriyarathne1997@gmail.com",
-        subject: `New Inquiry - ${name}`,
-        text: `there's a new inquiry from ${name} - ${email} - ${message}`,
-      };
+      const emailDetails = generateInquireEmailDetails(
+        name,
+        email,
+        company,
+        message
+      );
 
-      // sed the mail
-      mailTransport.sendMail(emailDetails, (err, info) => {
+      // subscribe the user to mailchimp
+      subscribeUser(email, name);
+
+      // send the mail
+      sendEmail(emailDetails, (err, info) => {
         if (err) {
           console.error(err.message);
 
@@ -38,7 +31,7 @@ const handler = (req, res) => {
             status: "error",
           });
         } else {
-          console.log(info);
+          console.log(`Email sent successfully - emailId: ${info.messageId}`);
 
           // send success status
           res.status(200).json({
