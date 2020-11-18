@@ -19,23 +19,40 @@ const InquiryForm = ({ style = {} }) => {
   const [message, updateMessage, resetMessage] = useInputState();
 
   // submit handler
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // TODO:  implement a server side part
+    const res = await fetch("/api/inquire", {
+      method: "POST",
+      credentials: "same-origin",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, company, message }),
+    });
+
+    if (res.status === 200) {
+      // show the notification
+      setMessage(
+        "Thanks for your message! We will get back to you as soon as possible."
+      );
+      setTimeout(() => {
+        setMessage();
+      }, 5000);
+    } else {
+      const data = await res.json();
+      // show the error notification
+      setMessage(data.message);
+      setTimeout(() => {
+        setMessage();
+      }, 5000);
+    }
 
     resetName();
     resetEmail();
     resetCompany();
     resetMessage();
-
-    // show the notification
-    setMessage(
-      "Thanks for your message! We will get back to you as soon as possible."
-    );
-    setTimeout(() => {
-      setMessage();
-    }, 5000);
   };
 
   return (
