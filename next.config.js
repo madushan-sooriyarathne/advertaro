@@ -8,5 +8,8 @@ module.exports = {
     EMAIL_PASSWORD: process.env.EMAIL_PASSWORD,
     EMAIL_HOST: process.env.EMAIL_HOST,
     EMAIL_PORT: process.env.EMAIL_PORT,
+    MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
+    MAILCHIMP_SERVER_PREFIX: process.env.MAILCHIMP_SERVER_PREFIX,
+    MAILCHIMP_LIST_ID: process.env.MAILCHIMP_LIST_ID,
   },
 };
