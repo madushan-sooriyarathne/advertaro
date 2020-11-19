@@ -6,7 +6,7 @@ mailchimp.setConfig({
   server: process.env.MAILCHIMP_SERVER_PREFIX,
 });
 
-const subscribeUser = async (email, name = null) => {
+const subscribeUser = async (email, name = "") => {
   const subscriber = {
     email_address: email,
     status: "subscribed",

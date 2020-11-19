@@ -15,18 +15,37 @@ const Newsletter = () => {
   // state
   const [email, updateEmail, resetEmail] = useInputState("");
 
-  const handleSubmit = (event) => {
-    // TODO: handle saving the submitted email to mailchimp or our own DB
-    // until that process run show  a loading spinner in the button
-
+  const handleSubmit = async (event) => {
     event.preventDefault();
     resetEmail();
-    setMessage(
-      "Thanks for subscribing to our newsletter. A confirmation email has been sent!"
-    );
-    setTimeout(() => {
-      setMessage();
-    }, 5000);
+
+    const res = await fetch("/api/subscribe", {
+      method: "POST",
+      credentials: "same-origin",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    if (res.status === 200) {
+      // show success notification
+      setMessage(
+        "Thanks for subscribing to our newsletter. A confirmation email has been sent!"
+      );
+      setTimeout(() => {
+        setMessage();
+      }, 5000);
+    } else {
+      // show success notification
+      setMessage(
+        `There's a problem with subscribing you into our newsletter. Please bare with us and try again shortly`
+      );
+      setTimeout(() => {
+        setMessage();
+      }, 5000);
+    }
   };
 
   return (

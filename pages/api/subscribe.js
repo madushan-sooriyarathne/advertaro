@@ -1,6 +1,6 @@
 const { subscribeUser } = require("../../utils/subscriptionHandler");
 
-const subscribe = (req, res) => {
+const subscribe = async (req, res) => {
   if (req.method === "POST") {
     const email = req.body.email;
 
@@ -10,7 +10,7 @@ const subscribe = (req, res) => {
         status: "error",
       });
 
-    const state = subscribeUser(email);
+    const state = await subscribeUser(email);
 
     if (state) {
       // send success status
@@ -21,7 +21,7 @@ const subscribe = (req, res) => {
     } else {
       // send failed status
       res.status(503).json({
-        message: "error sending emails",
+        message: "error subscribing to the newsletter",
         status: "error",
       });
     }
