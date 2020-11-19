@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { SnackBarDispatchContext } from "../../../context/SnackBarContext";
 import useInputState from "../../../hooks/UseInputState";
 
@@ -14,10 +14,14 @@ const Newsletter = () => {
 
   // state
   const [email, updateEmail, resetEmail] = useInputState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     resetEmail();
+
+    // show loading spinner
+    setLoading(true);
 
     const res = await fetch("/api/subscribe", {
       method: "POST",
@@ -28,6 +32,9 @@ const Newsletter = () => {
       },
       body: JSON.stringify({ email }),
     });
+
+    // hide loading spinner
+    setLoading(false);
 
     if (res.status === 200) {
       // show success notification
@@ -62,7 +69,7 @@ const Newsletter = () => {
           value={email}
           handleUpdate={updateEmail}
         ></InputField>
-        <SubmitButton>Subscribe</SubmitButton>
+        <SubmitButton loading={loading}>Subscribe</SubmitButton>
       </FormGroup>
     </NewsletterSection>
   );

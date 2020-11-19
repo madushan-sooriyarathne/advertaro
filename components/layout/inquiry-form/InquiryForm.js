@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import { SnackBarDispatchContext } from "../../../context/SnackBarContext";
 import useInputState from "../../../hooks/UseInputState";
@@ -18,9 +18,14 @@ const InquiryForm = ({ style = {} }) => {
   const [company, updateCompany, resetCompany] = useInputState();
   const [message, updateMessage, resetMessage] = useInputState();
 
+  const [loading, setLoading] = useState(false);
+
   // submit handler
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // show loading spinner
+    setLoading(true);
 
     const res = await fetch("/api/inquire", {
       method: "POST",
@@ -31,6 +36,9 @@ const InquiryForm = ({ style = {} }) => {
       },
       body: JSON.stringify({ name, email, company, message }),
     });
+
+    // hide loading spinner
+    setLoading(false);
 
     if (res.status === 200) {
       // show the notification
@@ -89,7 +97,7 @@ const InquiryForm = ({ style = {} }) => {
         value={message}
         handleUpdate={updateMessage}
       />
-      <SubmitButton>Submit</SubmitButton>
+      <SubmitButton loading={loading}>Submit</SubmitButton>
     </FormGroup>
   );
 };
