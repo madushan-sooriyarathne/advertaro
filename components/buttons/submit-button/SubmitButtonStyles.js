@@ -7,6 +7,11 @@ const Button = styled(CallToActionButton)`
   align-self: flex-start;
   transition: all 0.2s ease-in-out;
   height: 100%;
+  min-width: 13rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     color: ${(props) => props.theme.colorWhite};
