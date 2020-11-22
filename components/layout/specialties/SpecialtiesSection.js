@@ -12,12 +12,12 @@ const Specialties = ({ specialties }) => {
         <SecondaryHeading>Why choose advertaro?</SecondaryHeading>
       </TitleGroup>
       <ItemGroup>
-        {specialties.map((item) => (
+        {specialties.map((service) => (
           <ImageContentBox
-            image={item.image}
-            title={item.title}
-            description={item.description}
-            key={item.title.toLowerCase()}
+            image={service.serviceImage.fields.file.url}
+            title={service.title}
+            description={service.description}
+            key={service.id}
           />
         ))}
       </ItemGroup>
