@@ -1,4 +1,4 @@
-import { fetchCaseStudies } from "../../contentful/caseStudies";
+import { fetchEntries } from "../../contentful/contentFetch";
 
 import Page from "../../components/layout/page/Page";
 import CaseStudiesSection from "../../components/layout/case-studies-section/CaseStudiesSection";
@@ -12,8 +12,8 @@ const CaseStudies = ({ caseStudies }) => {
 };
 
 const getStaticProps = async () => {
-  const res = await fetchCaseStudies();
-  const caseStudies = await res.map((entry) => ({
+  const res = await fetchEntries("caseStuides");
+  const caseStudies = res.map((entry) => ({
     id: entry.sys.id,
     ...entry.fields,
   }));
