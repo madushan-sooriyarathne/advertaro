@@ -43,7 +43,7 @@ const DescriptionGroup = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.5px;
 

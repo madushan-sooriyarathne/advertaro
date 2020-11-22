@@ -90,7 +90,7 @@ const SubTitle = styled(Title)`
 `;
 
 const Description = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   text-align: justify;
   hyphens: auto;
@@ -99,7 +99,7 @@ const Description = styled.p`
 
 const SubDescription = styled(Description)`
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 `;
 
 export {
