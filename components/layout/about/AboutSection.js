@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <Container>
       <TitleGroup>
-        <MainHeading>If your Business is a Story,</MainHeading>
+        <MainHeading>If your Business is a Story</MainHeading>
         <SecondaryHeading>
           We tell it to people by making sure they’ll be all ears.
         </SecondaryHeading>
