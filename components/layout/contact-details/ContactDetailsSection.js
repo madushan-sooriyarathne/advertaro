@@ -29,7 +29,7 @@ const ContactDetailsSection = () => {
             <ContactItem>
               No 18, Gnanathilake Mawatha, Mount Lavinia.
             </ContactItem>
-            <ContactItem>+94 71 688 0657</ContactItem>
+            <ContactItem>0094 70 707 0725</ContactItem>
             <ContactItem>hello@advertaro.lk</ContactItem>
           </ContactItemsGroup>
         </ContactDetails>
