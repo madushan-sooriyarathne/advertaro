@@ -19,9 +19,9 @@ const PartnerSection = ({ partners }) => {
       <Partners>
         {partners.map((partner) => (
           <PartnerBox
-            img={partner.img}
+            img={partner.image.fields.file.url}
             name={partner.name}
-            key={partner.name.toLowerCase().split(" ").join("_")}
+            key={partner.id}
           />
         ))}
       </Partners>

@@ -12,7 +12,7 @@ const AboutSection = () => {
         </SecondaryHeading>
       </TitleGroup>
       <Description>
-        We are a independent creative marketing firm on Business-to-consumer
+        We are an independent creative marketing firm on Business-to-consumer
         model assisting modest to substantial businesses to perform on digital
         and Tradition platforms with a result-driven framework.
       </Description>

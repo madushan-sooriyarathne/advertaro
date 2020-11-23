@@ -1,9 +1,9 @@
 import { Box, Name } from "./ItemBoxStyles";
 
-const ItemBox = ({ name, img }) => {
+const ItemBox = ({ service }) => {
   return (
-    <Box image={img}>
-      <Name>{name}</Name>
+    <Box image={service.serviceImage.fields.file.url}>
+      <Name>{service.title}</Name>
     </Box>
   );
 };

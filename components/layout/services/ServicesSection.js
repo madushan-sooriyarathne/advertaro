@@ -12,7 +12,11 @@ import {
 } from "./ServicesSectionStyles";
 import CommonButtonDark from "../../buttons/common-button/CommonButtonDark";
 
-const ServicesSection = () => {
+const ServicesSection = ({ services }) => {
+  // extract data
+  // filter first three services
+  const filteredServices = services.filter((item, index) => index < 3);
+
   return (
     <Section>
       <TitleGroup>
@@ -20,22 +24,13 @@ const ServicesSection = () => {
         <SecondaryHeading>We help your business grow</SecondaryHeading>
       </TitleGroup>
       <FirstBox>
-        <ItemBox
-          name="Corporate Branding"
-          img="/static/img/corporate-branding.jpg"
-        />
+        <ItemBox service={filteredServices[0]} />
       </FirstBox>
       <SecondBox>
-        <ItemBox
-          name="Social Media Marketing"
-          img="/static/img/social-media-marketing.jpg"
-        />
+        <ItemBox service={filteredServices[1]} />
       </SecondBox>
       <ThirdBox>
-        <ItemBox
-          name="Web Design & Development"
-          img="/static/img/web-design.jpg"
-        />
+        <ItemBox service={filteredServices[2]} />
       </ThirdBox>
       <ButtonWrapper>
         <CommonButtonDark text="Explore Our Services" url="/about#services" />
