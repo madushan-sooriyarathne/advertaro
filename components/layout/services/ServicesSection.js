@@ -33,7 +33,7 @@ const ServicesSection = ({ services }) => {
         <ItemBox service={filteredServices[2]} />
       </ThirdBox>
       <ButtonWrapper>
-        <CommonButtonDark text="Explore Our Services" url="/about#services" />
+        <CommonButtonDark text="Explore Our Services" url="/services" />
       </ButtonWrapper>
     </Section>
   );
