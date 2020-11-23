@@ -20,7 +20,7 @@ const sendEmail = (emailDetails, callback) => {
 const generateInquireEmailDetails = (name, email, company, message) => {
   const emailDetails = {
     from: `"Mail Admin - Advertaro 🧍"  <${email}>`,
-    to: "sooriyarathna1997@gmail.com, sam_sajith@live.com",
+    to: "hello@advertaro.lk, sooriyarathna1997@gmail.com, sam_sajith@live.com",
     subject: `New Inquiry - ${name}`,
     html: `
     <p><strong>There&apos;s a new inquiry from Madushan</strong></p>
