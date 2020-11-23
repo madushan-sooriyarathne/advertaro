@@ -6,14 +6,15 @@ const AboutSection = () => {
   return (
     <Container>
       <TitleGroup>
-        <MainHeading>We Are</MainHeading>
+        <MainHeading>If your Business is a Story,</MainHeading>
         <SecondaryHeading>
-          a Small Digital Agency with Big Solutions
+          We tell it to people by making sure they’ll be all ears.
         </SecondaryHeading>
       </TitleGroup>
       <Description>
-        We help small to medium business / organizations to Digital with our
-        comprehensive & result-oriented Marketing Solutions
+        We are a independent creative marketing firm on Business-to-consumer
+        model assisting modest to substantial businesses to perform on digital
+        and Tradition platforms with a result-driven framework.
       </Description>
     </Container>
   );
