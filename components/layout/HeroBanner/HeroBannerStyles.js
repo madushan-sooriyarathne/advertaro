@@ -35,7 +35,7 @@ const Container = styled.section`
     );
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: center bottom;
 
   padding: 10rem 5rem;
 
@@ -61,6 +61,10 @@ const Container = styled.section`
       "ct"
       "im";
     padding: 5rem;
+  }
+
+  @media only screen and (max-height: 56.25em) {
+    background-position: center;
   }
 `;
 
@@ -110,6 +114,14 @@ const Image = styled.img`
   ${(props) => props.theme.responsiveLower} {
     min-height: 65rem;
     align-items: center;
+  }
+
+  @media only screen and (max-height: 62.5em) {
+    height: 55rem;
+  }
+
+  @media only screen and (max-height: 37.5em) {
+    height: 50rem;
   }
 `;
 
