@@ -18,11 +18,20 @@ const Field = styled.input`
   outline: none;
   border: ${(props) => `2px solid ${props.theme.colorSecondary}`};
   font-family: ${(props) => props.theme.fontPrimary};
+  transition: border 0.1s ease-in;
 
   &::placeholder {
     font-family: ${(props) => props.theme.fontPrimary};
     font-size: 1.5rem;
     font-weight: 300;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border: ${(props) => `2px solid ${props.theme.colorError}`};
+  }
+
+  &:not(:placeholder-shown):valid {
+    border: ${(props) => `2px solid ${props.theme.colorSuccess}`};
   }
 
   ${(props) => props.theme.responsiveLowest} {
