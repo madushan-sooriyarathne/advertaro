@@ -9,7 +9,7 @@ const theme = {
   colorGray: "#6c757d",
   colorBg: "#f8edeb",
   colorError: "#e63946",
-  colorSuccess: "#06d6a00",
+  colorSuccess: "#06d6a0",
   fontPrimary: "'SF UI Text', sans-serif",
   fontSecondary: "'SF UI Display', sans-serif",
   boxShadowNormal: "0 4px 8px 4px rgba(0, 0, 0, 0.1)",
