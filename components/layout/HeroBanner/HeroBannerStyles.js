@@ -116,8 +116,15 @@ const Image = styled.img`
     align-items: center;
   }
 
-  @media only screen and (max-height: 62.5em) {
+  @media only screen and (max-height: 50em) and (min-width: 102em) {
     height: 55rem;
+  }
+
+  @media only screen and (max-height: 46.875em) and (min-width: 102em) {
+    height: 45rem;
+  }
+  @media only screen and (max-height: 43.75em) and (min-width: 81.25em) {
+    height: 40rem;
   }
 
   @media only screen and (max-height: 37.5em) {
