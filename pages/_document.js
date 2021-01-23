@@ -85,6 +85,11 @@ class MainDocument extends Document {
             sizes="192x192"
             href="/static/icons/icon-192x192.png"
           ></link>
+
+          <link
+            href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+            rel="stylesheet"
+          />
         </Head>
         <body style={{ visibility: "hidden" }}>
           <Main />
