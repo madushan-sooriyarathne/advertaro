@@ -11,5 +11,6 @@ module.exports = {
     MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
     MAILCHIMP_SERVER_PREFIX: process.env.MAILCHIMP_SERVER_PREFIX,
     MAILCHIMP_LIST_ID: process.env.MAILCHIMP_LIST_ID,
+    MAPBOX_API_KEY: process.env.MAPBOX_API_KEY,
   },
 };
