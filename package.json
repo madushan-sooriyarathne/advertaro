@@ -20,7 +20,7 @@
   "homepage": "https://advertaro.lk",
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.23",
-    "contentful": "^7.14.12",
+    "contentful": "^7.15.2",
     "mapbox-gl": "^2.0.1",
     "next": "^10.0.1",
     "nodemailer": "^6.4.16",
