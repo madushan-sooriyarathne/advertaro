@@ -6,6 +6,7 @@ import { Wrapper } from "./PageStyles";
 import NavOverlay from "../nav-overlay/NavOverlay";
 import Floater from "../floater/Floater";
 import PageOverlay from "../page-overlay/PageOverlay";
+import BestWebVoteWidget from "../../best-web-vote-widget/BestWebVoteWidget";
 
 const Page = ({ children }) => {
   const navLinks = [
@@ -21,6 +22,7 @@ const Page = ({ children }) => {
       <PageOverlay />
       <NavOverlay navLinks={navLinks} />
       <NavBar navLinks={navLinks} />
+      <BestWebVoteWidget />
       {children}
 
       <Footer navLinks={navLinks} />
