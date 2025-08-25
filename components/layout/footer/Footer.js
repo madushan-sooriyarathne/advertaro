@@ -60,7 +60,7 @@ const Footer = ({ navLinks }) => {
             <ContactIcon>
               <use xlinkHref="/static/img/svg/sprites.svg#phone"></use>
             </ContactIcon>
-            <ContactItemText>0094 70 707 0725</ContactItemText>
+            <ContactItemText>+94 777 031 678</ContactItemText>
           </ContactItem>
           <ContactItem>
             <ContactIcon>
